@@ -1,1 +1,4 @@
+Frequency array
+1) Find nth largest number/duplicate/unique value
+2) https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J
 
