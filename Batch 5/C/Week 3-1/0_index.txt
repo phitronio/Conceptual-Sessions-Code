@@ -1,1 +1,51 @@
+1) String
+2) Problem Solving
+
+
+Title: Exploring Strings in C
+
+1) String
+
+I. Introduction to Strings
+
+II. Declaring and Initializing Strings
+
+III. String Input/Output: normal,out of range, newline
+
+IV. Reading strings from the console
+
+V. Writing strings to the console
+
+
+2) Problem Solving:
+===================
+
+1) Write down a program to print the below program.
+
+Sample Input:
+5
+shift
+5
+right
+
+Sample Output: 
+shift right
+
+
+2) Write down a program to print the below program.
+
+Sample Input:
+2
+5
+shift
+5
+right
+
+Sample Ouput: 
+shift right
+
+
+3)https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/K
+
+4)https://codeforces.com/problemset/problem/71/A
 
