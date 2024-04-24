@@ -1,0 +1,75 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+
+    // step - 1
+    char ch[4];
+    ch[0] = 'a';
+    ch[1] = 's';
+    ch[2] = 'i';
+    ch[3] = 'f';
+    printf("%s",ch);
+
+    // step-2
+    char ch[5];
+    ch[0] = 'a';
+    ch[1] = 's';
+    ch[2] = 'i';
+    ch[3] = 'f';
+    ch[4] = '\0';
+    printf("%s",ch);
+
+    char ch[5] = "asif";
+    char ch[] = "asif asif asif";
+    char ch[5] = {'a','s','i','f','\0'};
+    printf("%s",ch);
+
+    char ch[5];
+    int n;
+    scanf("%s",&ch);
+    scanf("%d",&n);
+    gets(ch);
+
+    fgets(ch,sizeof(ch)/sizeof(char),stdin);
+    printf("%d ",sizeof(ch)/sizeof(char));
+    printf("%d\n",strlen(ch));
+
+    printf("%s",ch);
+
+              
+    return 0;
+}
+
+
+I Love String:
+--------------
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int t;
+    scanf("%d",&t);
+
+    while(t--){
+        char a[60],b[60];
+        scanf("%s %s",a,b);
+
+        int alen = strlen(a);
+        int blen = strlen(b);
+        int mx;
+        if(alen>blen) mx = alen;
+        else mx = blen;
+
+        for(int i=0;i<mx;i++){
+            if(i<alen){
+                printf("%c",a[i]);
+            }
+            if(i<blen){
+                printf("%c",b[i]);
+            }
+        }
+        printf("\n");
+    }        
+              
+    return 0;
+}
