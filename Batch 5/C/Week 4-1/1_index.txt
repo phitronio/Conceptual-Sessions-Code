@@ -1,0 +1,16 @@
+Discussion Topic:
+1- Introduction
+2- What are the 4 types of functions in C?
+   What are the different categories of functions in C Programming?
+    -Functions without arguments and without return values.
+    -Functions without arguments and with return values.
+    -Functions with arguments and without return values.
+    -Functions with arguments and with return values.
+
+    i)Return + Arguments
+    ii)No Return + Arguments
+    iii)Return +No Arguments
+    iv)No Return + Arguments  
+    
+3-  Problem Solving
+
