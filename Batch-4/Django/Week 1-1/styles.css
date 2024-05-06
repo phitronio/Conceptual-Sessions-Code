@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container{
+    background-color: rgb(33, 31, 31);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+}
+
+.logo{
+    width: 120px;
+}
+
+.menu{
+    display: flex;
+}
+
+.item{
+    margin-left: 10px;
+    padding: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.item:hover {
+    color: red;
+    background-color: aqua;
+}
+
+.banner-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    color: white;
+    background-image: url("./images/background.png"),
+    linear-gradient(45deg, rgb(8, 8, 8), rgb(52, 50, 50));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.title{
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.description{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn{
+    border: none;
+    padding: 10px 22px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+
+.banner-img{
+    width: 300px;
+}
+
+.about-container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-title{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.service-container{
+    padding: 50px;
+    background-image: url("./images/background.png"),
+    linear-gradient(45deg, rgb(8, 8, 8), rgb(52, 50, 50));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.box{
+    width: 200px;
+    height: 280px;
+    box-shadow: 4px 4px 15px gray;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    background-color: black;
+}
+
+.icon{
+    width: 70px;
+    padding-bottom: 10px;
+}
+
+.box-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.box-description{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.box-btn{
+    background-color: gray;
+}
+
+.service-title{
+    color: white;
+}
+
+footer{
+    background-color: rgb(8, 8, 8);
+    color: white;
+    line-height: 1.8rem;
+}
+
+.footer-container{
+    height: 60vh;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo-box{
+    width: 25%;
+}
+
+.logo-box img{
+    width: 170px;
+}
+
+.footer-title{
+    margin-bottom: 30px;
+}
+
+.copy{
+    border-top: 2px gray solid;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
