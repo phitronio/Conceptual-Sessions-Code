@@ -1,0 +1,5 @@
+1) What is Linked List?
+2) How to create Node?How to think?
+3) How to connect Node?
+4) Print the list.
+5) Perform Some Operation(Insert at head,tail)
