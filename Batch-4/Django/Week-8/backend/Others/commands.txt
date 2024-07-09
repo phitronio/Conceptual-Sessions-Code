@@ -1,0 +1,33 @@
+
+
+> python -m venv .venv
+> .venv\Scripts\Activate.ps1
+(.venv) > python -m pip install django~=4.0.0
+(.venv) > django-admin startproject django_project .
+(.venv) > python manage.py startapp app_name
+(.venv) > python manage.py migrate
+
+
+
+python manage.py startapp accounts
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+
+python manage.py startapp posts
+python manage.py makemigrations posts
+
+----------
+
+python -m pip install djangorestframework
+-
+python -m pip install django-cors-headers
+-
+python -m pip install dj-rest-auth
+-
+python -m pip install django-allauth
+pip install requests
+
+
