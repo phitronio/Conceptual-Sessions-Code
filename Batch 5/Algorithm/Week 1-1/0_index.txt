@@ -1,0 +1,22 @@
+1) Introduction
+2) Variation of Graph
+3) Representation
+4) Vector of vector and Array of Vector
+5) Array of vector vs vector of vector
+
+
+                        row dynamic                 col dynamic
+
+
+Array of vector               No                        Yes
+
+
+
+Vector of vector              Yes                       YES
+
+
+
+Note:
+vector of vector --> vector<vector<int>>arr;
+vector of array  -->vector<array<int,5>>arr; (optional)
+array of vector  --> vector<int>> arr[5];
