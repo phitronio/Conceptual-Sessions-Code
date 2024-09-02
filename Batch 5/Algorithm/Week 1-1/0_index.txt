@@ -18,5 +18,4 @@ Vector of vector              Yes                       YES
 
 Note:
 vector of vector --> vector<vector<int>>arr;
-vector of array  -->vector<array<int,5>>arr; (optional)
 array of vector  --> vector<int>> arr[5];
