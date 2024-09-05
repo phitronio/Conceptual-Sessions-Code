@@ -1,0 +1,8 @@
+1. Counting Countries in a Matrix
+-> DFS and BFS 
+
+2. Determine if we could go from one place to another
+
+3. Shortest route from one city to another city 
+-> Guess which one to use. 
+
