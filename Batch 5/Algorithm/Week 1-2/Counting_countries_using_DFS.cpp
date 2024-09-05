@@ -40,36 +40,6 @@ void dfs(int si, int sj)
     }
 }
 
-void bfs(int si, int sj)
-{
-
-    queue<pair<int, int>> q;
-    q.push({si, sj});
-    vis[si][sj] = true;
-
-    while (!q.empty())
-    {
-
-        pair<int, int> node = q.front();
-        q.pop();
-        int nrow = node.first;
-        int ncol = node.second;
-
-        for (int i = 0; i < 4; i++)
-        {
-
-            int ci = nrow + dx[i]; // children er row
-            int cj = ncol + dy[i]; // children er column
-
-            if (valid(ci, cj) && vis[ci][cj] == false)
-            {
-                vis[ci][cj] = true;
-                q.push({ci, cj});
-            }
-        }
-    }
-}
-
 int main()
 {
 
@@ -92,7 +62,7 @@ int main()
 
             if (graph[i][j] == '.' && vis[i][j] == false)
             {
-                bfs(i, j);
+                dfs(i, j);
                 cnt++;
             }
         }

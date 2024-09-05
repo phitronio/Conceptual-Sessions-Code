@@ -1,4 +1,17 @@
-1. Counting Countries in a Matrix
+Given a graph in 2D matrix , Answer the Following Questions. 
+
+5 5 
+..~..
+.....
+~~~.~
+...~~
+...~~
+
+Here '.' indicates cities and '~' indicates river. 
+
+
+
+1. Counting Countries in the Matrix
 -> DFS and BFS 
 
 2. Determine if we could go from one place to another

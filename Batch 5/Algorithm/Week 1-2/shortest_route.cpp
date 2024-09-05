@@ -22,7 +22,7 @@ bool valid(int x, int y)
     }
 }
 
-int level[1001][1001];
+int level[1001][1001]; // to store the distance
 
 void bfs(int si, int sj)
 {
@@ -79,7 +79,7 @@ int main()
 
     if (vis[destination_row][destination_column])
     {
-        cout << "shortest distance" << level[destination_row][destination_column] << endl;
+        cout << "shortest distance: " << level[destination_row][destination_column] << endl;
     }
     else
         cout << "jawa jabe na" << endl;
