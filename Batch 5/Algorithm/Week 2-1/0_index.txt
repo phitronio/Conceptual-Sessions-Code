@@ -1,0 +1,29 @@
+Single Source Shortest Path(SSSP)
+=================================
+
+BFS:
+    Possible:
+                  UnWeighted 
+                  Undirected + Directed
+                  Non-Negative Node 
+    ImPossible:
+                  Weighted 
+                  Negative Node + Negative edge weight
+                  
+                  Solution:
+                  Dijkstra  (weighted edge)
+                  Bellman-Ford algorithm it can be possible (Negative edge weight)
+
+
+Problem Link:
+    https://codeforces.com/problemset/problem/20/C
+
+Sample Input:
+5 6
+1 2 2
+2 5 5
+2 3 4
+1 4 1
+4 3 3
+3 5 1
+
