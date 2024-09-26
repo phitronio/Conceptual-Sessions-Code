@@ -1,0 +1,19 @@
+Problem Solving
+
+1. https://cses.fi/problemset/task/1675/
+
+Additional 
+
+1. Minimum road lagbe koita ?
+2. Road beshi ase koita ? (homework)
+
+
+2. Discussion:  
+-> Visualizing the path using BFS
+-> How can we manipulate path choosing in BFS 
+
+-> visualizing the shortest path in 2D matrix 
+-> Manipulating path choosing in 2D matrix 
+
+
+        
