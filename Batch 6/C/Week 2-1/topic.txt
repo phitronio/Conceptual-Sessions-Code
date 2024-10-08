@@ -1,0 +1,10 @@
+If else related problem:
+-> Phitron Holiday Special
+
+1. https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I
+-> corner case , if else revision
+
+Loop Related Problems:
+
+1. https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/D
+2. https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/E
