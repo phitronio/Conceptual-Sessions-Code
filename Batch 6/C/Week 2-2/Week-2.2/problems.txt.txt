@@ -1,0 +1,9 @@
+Here are the problems we have solved in today's class:
+
+Pattern Related:
+1.https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/T
+2.https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/W
+
+Array Related:
+1.https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/B
+2.https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/D
