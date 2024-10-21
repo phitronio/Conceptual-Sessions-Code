@@ -1,0 +1,30 @@
+Week 4 Conceptual Session 1 
+
+Topics:
+
+1. Intro to String 
+ Operations:
+ i. Insertion
+ ii. Deletion  
+
+2. Reversing an Array / String
+-> Naive 
+-> Two Pointers Approach 
+
+Problem: https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/F
+
+
+Problem Solving 
+
+1. https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/G (Palindrome Array)
+-> Naive way (Extra Array)
+-> Two Pointers
+
+2. https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/K
+-> Long Number
+
+
+
+
+
+
