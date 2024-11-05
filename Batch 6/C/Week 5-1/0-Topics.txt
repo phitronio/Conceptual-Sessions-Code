@@ -1,0 +1,25 @@
+Topic: 
+
+Function : ( Definition )
+1. Parameter + Return
+2. No Parameter + Return
+3. Parameter + NO Return
+4. No Parameter + No return 
+
+Problem solving : 
+1. Add (works with every type) ()
+1. https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/G (parameter , no return )
+2. https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/G (no parameter , no return)
+
+additional : 
+1. Call by value
+2. Call by reference 
+(when to use )
+
+
+Recursion:
+1. Defination
+3. how to think recursively 
+
+Problem  : 
+1. https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/K
