@@ -1,0 +1,27 @@
+String Recap:
+1. Definition
+2. Declaration + User Input 
+3. Input with Spaces
+4. Useful Access Function
+   i. Index
+   ii. front()
+   ii. back() 
+5. Useful Modification 
+   i. Concat using + 
+   ii. push_back and pop_back
+   iii. Easy assignment using =
+   iv. Erase -> s.erase(idx, number of characters) 
+   v. Replace -> s.replace(idx , num of characters, string)
+   vi. Insert -> str1.insert(pos, c); str1.insert(pos, str2); 
+6. Find Function
+7. Stringstream 
+8. Reverse Function
+9. Sort Function
+
+
+Problem solving :
+
+1.https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/H
+2.https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/V
+-> replace (Homework) 
+-> erase + insert 
