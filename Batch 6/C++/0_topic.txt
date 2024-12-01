@@ -1,0 +1,32 @@
+Topic: 
+
+Pointers Recap
+1. Pointer Definition
+2. Dereferencing / Accessing the value
+3. Pointer of an Array
+
+
+
+Dynamic Memory Allocation: 
+
+1. Stack memory and Heap memory
+2. Dynamic Variable allocation with visualization 
+  -> declaration
+  -> input 
+  ->output
+3. Dynamic array allocation with visualization
+  -> declaration
+  -> input
+  -> output 
+
+4. Why we need Dynamic Array ?
+  -> memory allocation / deallocation
+  -> function 
+
+5. Array in a function 
+
+Visualizer: https://pythontutor.com/render.html#mode=edit
+
+
+
+
