@@ -1,0 +1,28 @@
+Time Complexity:
+
+1. What is time complexity 
+2. Overview of popular time complexity:
+3. Why we need to calculate time complexity before writing code
+
+
+Problems:
+1 : https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/D
+
+Can we do this using this complexities ?
+https://docs.google.com/document/d/1i2zJTPCAImx0bPmCijqBeCP5-C_D-VVuJPdI68w-5RA/edit?tab=t.0
+
+
+
+
+
+
+Vector: 
+1. What is vector 
+2. Why vector ?
+
+
+
+Problems: 
+1. Divisors (https://lightoj.com/problem/dimik-divisor)
+2. Sereja and Dima 
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/L
