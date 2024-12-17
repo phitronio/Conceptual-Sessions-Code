@@ -1,0 +1,15 @@
+1. What is linked list
+2. Why linked list
+3. Dynamic Node
+4. Reference of a pointer
+6. Printing a Singly Linked list
+7. Insertion
+ -> Head
+ -> Tail
+ -> Any position
+
+8. Size of a Singly Linked List 
+
+Practice:
+1. Middle elements of a linked list 
+2. Checking if a linked list is sorted or not 
