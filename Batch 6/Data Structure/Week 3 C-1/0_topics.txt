@@ -1,0 +1,23 @@
+1.Intro to Doubly Linked List 
+Benefits 
+
+Operations:
+
+1. Insertion 
+  -> Head
+  -> Tail
+  -> Any position
+2. Deletion 
+  -> Head
+  -> Tail
+  -> Any position
+
+3.Input from user 
+
+4.Linked List Size in O(1)
+
+
+Problem Solving:
+
+1. Browser History 
+https://leetcode.com/problems/design-browser-history/
