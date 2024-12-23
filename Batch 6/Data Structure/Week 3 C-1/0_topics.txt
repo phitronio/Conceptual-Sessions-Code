@@ -7,10 +7,8 @@ Operations:
   -> Head
   -> Tail
   -> Any position
-2. Deletion 
-  -> Head
-  -> Tail
-  -> Any position
+2. Deletion (Homework)
+
 
 3.Input from user 
 
