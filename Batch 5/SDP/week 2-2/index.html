@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Hero Course</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        background-color: #010313;
+        color: white;
+      }
+      .navbar {
+        background-color: #160929 !important;
+      }
+
+      .sidebar {
+        background-color: #160929;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      #curriculum-container {
+        overflow-y: scroll;
+        height: 72vh;
+        scroll-behavior: smooth;
+        padding-right: 10px; /* Creates space on the right side of the component */
+        box-sizing: content-box; /* Ensures padding doesn't affect the total width of the component */
+        transform: translateX(5px);
+      }
+      #curriculum-container::-webkit-scrollbar {
+        width: 10px;
+      }
+      #curriculum-container::-webkit-scrollbar-thumb {
+        background-color: #eeeeee16; 
+        border-radius: 10px;
+      }
+
+      #curriculum-container::-webkit-scrollbar-track {
+        background-color: #211235; /* Change the color of the track */
+        border-radius: 10px;
+      }
+      .milestone {
+        background-color: #211235;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      .milestone-item {
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+      /* .milestone-item:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+            } */
+      .module-item {
+        padding-left: 30px;
+        font-size: 0.9em;
+        color: #a0a0a0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./images/ph_logo.svg"
+              height="40"
+              alt="Programming Hero"
+            />
+          </a>
+          <h5 class="m-0">Programming Hero</h5>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Course Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conceptual Session</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <div class="main-content p-5">
+            <h1 class="display-6 mb-3 fw-bold">Welcome to the Course</h1>
+            <p class="h5">Start the mission of becoming a web developer</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="mb-0">Course Content</h5>
+              <span class="badge bg-primary">Loading...</span>
+            </div>
+            <!-- Curriculum content will be loaded here -->
+            <div id="curriculum-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

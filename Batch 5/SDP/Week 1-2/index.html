@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Gourmet Haven </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section id="#hero" class="hero">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="header">Welcome to Gourmet Haven</h1>
+            <p class="details">Experience culinary excellence in every bite</p>
+            <a href="#" class="btn btn-outline-light">Book a Table</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2>Our Story</h2>
+            <p>
+              Gourmet Haven was born from a passion for exquisite flavors and a
+              dedication to culinary artistry. Our chefs blend traditional
+              techniques with innovative twists to create unforgettable dining
+              experiences.
+            </p>
+            <p>
+              We source only the finest, freshest ingredients to ensure that
+              every dish is a masterpiece of taste and presentation.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="./Images/fotios-photos-776538.jpg"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu py-5 bg-light">
+      <div class="container">
+        <h2>Our Menu</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div>
+                <img
+                  src="./Images/Vegetarian Risotto.jpg"
+                  alt=""
+                  class="card-img-top menu-img"
+                />
+              </div>
+              <div class="card-body">
+                <h5>Grilled Salmon</h5>
+                <p>Fresh Atlantic salmon, lemon butter sauce, asparagus</p>
+                <p>$24.99</p>
+                <a href="#" class="btn btn-dark">Order</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div>
+                <img
+                  src="./Images/Vegetarian Risotto.jpg"
+                  alt=""
+                  class="card-img-top menu-img"
+                />
+              </div>
+              <div class="card-body">
+                <h5>Grilled Salmon</h5>
+                <p>Fresh Atlantic salmon, lemon butter sauce, asparagus</p>
+                <p>$24.99</p>
+                <a href="#" class="btn btn-dark">Order</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div>
+                <img
+                  src="./Images/Vegetarian Risotto.jpg"
+                  alt=""
+                  class="card-img-top menu-img"
+                />
+              </div>
+              <div class="card-body">
+                <h5>Grilled Salmon</h5>
+                <p>Fresh Atlantic salmon, lemon butter sauce, asparagus</p>
+                <p>$24.99</p>
+                <a href="#" class="btn btn-dark">Order</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="reviews" id="reviews py-5">
+      <div class="container py-5">
+        <h2 class="mb-5">What Our Customers Say</h2>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="./Images/4.jpg" alt="" />
+                  <h5>Jane Smith</h5>
+                  <p>
+                    "The food was absolutely amazing! The flavors were exquisite
+                    and the presentation was beautiful."
+                  </p>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="./Images/4.jpg" alt="" />
+                  <h5>Jane Smith</h5>
+                  <p>
+                    "The food was absolutely amazing! The flavors were exquisite
+                    and the presentation was beautiful."
+                  </p>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="./Images/4.jpg" alt="" />
+                  <h5>Jane Smith</h5>
+                  <p>
+                    "The food was absolutely amazing! The flavors were exquisite
+                    and the presentation was beautiful."
+                  </p>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section  -->
+    <section class="gallery bg-light py-5" id="gallery">
+      <div class="container">
+        <h2>Our Gallery</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="./Images/asadphoto-1449775.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              src="./Images/asadphoto-1449775.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              src="./Images/asadphoto-1449775.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-md-0 mb-4">
+            <h2>Contact Us</h2>
+            <form action="">
+              <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Name</label>
+                <input
+                  type="text"
+                  id="inputPassword5"
+                  class="form-control"
+                  aria-describedby="passwordHelpBlock"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="inputPassword5"
+                  class="form-control"
+                  aria-describedby="passwordHelpBlock"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  id="inputPassword5"
+                  class="form-control"
+                  aria-describedby="passwordHelpBlock"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button class="btn btn-dark">Send Message</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h2>Our Location</h2>
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29524.0160242007!2d91.79291255454778!3d22.334666196659242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad27bc4bc18d81%3A0xeb37880593c84f49!2sThe%20Arrosto!5e0!3m2!1sen!2sbd!4v1735227029786!5m2!1sen!2sbd"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section  -->
+    <footer class="bg-black py-5">
+      <div class="container">
+        <div class="row gap-5">
+          <div class="col-md-6 ">
+            <h5 class="text-light">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Home</a></li>
+              <li><a href="#" class="text-light">Menu</a></li>
+              <li><a href="#" class="text-light">Reviews</a></li>
+              <li><a href="#" class="text-light">Gallery</a></li>
+              <li><a href="#" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-light">Subscribe to Our Newsletter</h5>
+            <div class="row">
+              <div class="col-auto">
+                <input
+                  type="text"
+                  id="inputPassword5"
+                  class="form-control"
+                  aria-describedby="passwordHelpBlock"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-outline-light">Subcribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="text-light" />
+        <div class="row text-light">
+            <div class="col-md-6">
+                <p>© 2023 Gourmet Haven. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end text-center">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter-x"></i>
+            </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

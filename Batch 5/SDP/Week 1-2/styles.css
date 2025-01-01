@@ -1,0 +1,23 @@
+.nav-link {
+    color: rgb(131, 131, 131)
+    
+}
+
+/* Hero section  */
+.hero{
+    background: url('./Images/pixabay-260922.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.header, .details {
+    color:white
+}
+
+/* Menu section  */
+.menu-card{
+    transition: all 0.3s ease-in-out;
+}
+.menu-card:hover{
+    transform: scale(1.05);
+}
