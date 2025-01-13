@@ -1,0 +1,2 @@
+1) Min Stack: https://leetcode.com/problems/min-stack/description/
+2) Circular Game: https://leetcode.com/problems/find-the-winner-of-the-circular-game/
