@@ -1,0 +1,17 @@
+1.Pair (prerequisites)
+
+2. Map 
+https://codeforces.com/problemset/problem/4/C
+3. Set 
+https://codeforces.com/problemset/problem/22/A
+
+
+4. Priority Queue
+   -Max PQ
+   -Min PQ 
+Problem . Custom Comparator for Priority Queue
+
+1. Roll Name Marks given , 
+
+print highest marks student information 
+if the marks is same print the name who has lower roll. 
