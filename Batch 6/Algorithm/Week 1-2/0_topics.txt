@@ -1,0 +1,14 @@
+Given a graph in 2D matrix , Answer the Following Questions. 
+
+5 8
+~~~~~~~~
+~..~...~
+~~~~.~.~
+~..~...~
+~~~~~~~~
+
+Here '.' indicates cities and '~' indicates river. 
+
+1. Counting number of countries in the Matrix
+2. Determine if we could go from one city to another by vehicle 
+3. Number of max cities in the MAP 
