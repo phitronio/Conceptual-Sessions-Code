@@ -1,0 +1,4 @@
+Problem Link:
+1) Maximum Number of fish: https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/
+2) Counting Rooms:  https://cses.fi/problemset/submit/1192/
+3) https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab
