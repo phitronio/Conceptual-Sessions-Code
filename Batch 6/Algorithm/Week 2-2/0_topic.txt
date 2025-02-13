@@ -1,0 +1,16 @@
+1. A problem based on Graph Algorithm 
+https://www.spoj.com/problems/NAKANJ/
+
+
+2. Shortest Path printing of Graph
+ + How can we manipulate the path 
+
+3. Shortest Path Printing of 2D graph 
+
+5 5
+Aoooo
+.###o
+.###o
+.###o
+....B
+
