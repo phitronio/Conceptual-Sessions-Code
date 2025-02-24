@@ -1,0 +1,3 @@
+Bellman Ford: https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1
+Floyd Warshall: https://www.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1
+Network Delay Time: https://leetcode.com/problems/network-delay-time/description/ [using Floyd Warshall]
