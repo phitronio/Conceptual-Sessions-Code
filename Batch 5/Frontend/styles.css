@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .header-left{
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-icon{
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .logo{
+    height: 20px;
+  }
+
+  .search-bar{
+    display: flex;
+    flex:1;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-bar input{
+    flex: 1;
+    padding: 12px;
+    border:1px solid rgb(196, 186, 186);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 0;
+  }
+
+  .search-bar button{
+    
+    padding: 14px 24px;
+    border:none;
+    background-color: rgb(240, 235, 235);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 0;
+
+    margin-right: 20px;
+
+  }
+
+  .search-bar button:hover{
+    
+    padding: 14px 24px;
+    border:none;
+    background-color: rgb(83, 80, 80);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 0;
+
+    margin-right: 20px;
+
+  }
+
+
+  .search-bar>i{
+    
+    padding: 14px ;
+    border:none;
+    background-color: rgb(240, 235, 235);
+    border-radius: 25px;
+    
+  }
+
+  .main-container{
+    display: flex;
+    flex:1;
+  }
+
+  aside{
+    width: 250px;
+    padding: 10px;
+    position:sticky;
+    top:0;
+    height: 100vh;
+  }
+
+  aside ul li{
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  aside ul li i{
+    margin-right: 10px;
+    
+  }
+
+  aside ul li i,aside ul li{
+    font-weight: 100;
+  }
+
+  aside ul li:hover{
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(228, 220, 220);
+  }
+
+  .content{
+    flex:1;
+    padding: 20px;
+  }
+
+  .categories{
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+
+    margin-bottom: 15px;
+  }
+
+  .categories>button{
+    padding:10px 20px;
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  #all{
+    background-color: black;
+    color: white;
+  }
+
+  .video-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap:25px;
+  }
+
+  .video-card{
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .video-card img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .video-info{
+    padding: 10px;
+  }
+
+  .video-info h3{
+    margin-bottom: 10px;
+  }
+
+
+
+
