@@ -1,0 +1,12 @@
+
+How Online Judge Works ( General Explanation to understand it better )
+
+
+Problem solving 
+1. https://codeforces.com/problemset/problem/1866/A
+2. https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I 
+
+
+Recap of Nested Loop: 
+1. https://judge.phitron.io/topics/cm5z7wa3u0007p301xbzdqkuk/cm86d15s50092r001qeu2gb0t?language=c_103
+2. https://judge.phitron.io/topics/cm5z7wa3u0007p301xbzdqkuk/cm86d8btu009er001s04tfa7u?language=c_103
