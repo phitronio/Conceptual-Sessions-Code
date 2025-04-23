@@ -10,7 +10,7 @@ int main()
     printf("%lf\n", howManyDay);
     if (howManyDay - (int)howManyDay == 0)
     {
-        printf("%d\n", howManyDay);
+        printf("%d\n", (int)howManyDay); // double data to int data 
     }
     else
     {
