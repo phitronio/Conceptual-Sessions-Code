@@ -1,0 +1,48 @@
+What is Functions 
+
+
+Type of Functions : 
+
+
+Type 1 : Parameters + Return 
+
+You are given a positive integer n.
+Now print the sum of last digit and first digit of the given integers.
+Implement it using function.
+
+Note – It is guaranteed that all the integers will be a 4 digit value
+
+
+Type-2 : Parameters + No Return 
+
+You are given an integer n or –n .If you are given n , print n to –n ,
+if you are given –n, print –n to n.
+
+
+Type 3: No parameters + Return 
+
+Phi value function 
+
+Type 4 : No Parameters+ No return 
+
+Write a C program to take one positive 
+integer N as input and an array of N size and print all even indices 
+from 2 to N.
+
+
+
+
+**************  BONUS ****************** 
+
+Pattern Printing Using Function
+
+*********
+ *******
+  *****
+   ***
+    *
+
+
+
+
+
