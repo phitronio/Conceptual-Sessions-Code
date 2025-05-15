@@ -1,0 +1,78 @@
+
+
+
+
+610 . ( E ) - triangle-judgement
+
+
+
+SELECT *,
+       CASE 
+           WHEN x + y > z AND x + z > y AND y + z > x THEN 'Yes'
+           ELSE 'No'
+       END AS triangle
+FROM Triangle;
+
+
+
+
+
+
+178 . ( M ) - Rank Scores
+
+SELECT 
+  s1.score,
+  (
+    SELECT COUNT(DISTINCT s2.score)
+    FROM Scores s2
+    WHERE s2.score >= s1.score
+  ) AS `rank`
+FROM Scores s1
+ORDER BY s1.score DESC;
+
+
+
+
+
+
+185 . ( H ) - department-top-three-salaries
+
+# Write your MySQL query statement below
+SELECT 
+  d.name AS Department,
+  e1.name AS Employee,
+  e1.salary AS Salary
+FROM Employee e1
+JOIN Department d ON e1.departmentId = d.id
+WHERE (
+  SELECT COUNT(DISTINCT e2.salary)
+  FROM Employee e2
+  WHERE e2.departmentId = e1.departmentId
+    AND e2.salary > e1.salary
+) < 3;
+
+
+
+
+601 . (  ) - human-traffic-of-stadium
+
+WITH valid_stadium AS (
+    SELECT *
+    FROM Stadium
+    WHERE people >= 100
+),
+triplets AS (
+    SELECT s1.id AS id1, s2.id AS id2, s3.id AS id3
+    FROM valid_stadium s1
+    JOIN valid_stadium s2 ON s2.id = s1.id + 1
+    JOIN valid_stadium s3 ON s3.id = s1.id + 2
+)
+SELECT DISTINCT s.*
+FROM Stadium s
+JOIN triplets t ON s.id IN (t.id1, t.id2, t.id3)
+ORDER BY s.visit_date;
+
+
+
+
+

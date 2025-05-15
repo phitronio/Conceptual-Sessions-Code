@@ -1,0 +1,85 @@
+
+
+
+182 . (E) Duplicate Emails
+
+
+select email as "Email"
+from Person
+group by email having count(email) > 1;
+
+
+
+
+
+
+
+176 . (M) Second Highest Salary
+
+
+SELECT MAX(salary) AS SecondHighestSalary
+FROM Employee WHERE
+salary NOT IN ( SELECT MAX(salary) FROM Employee)
+
+
+
+
+
+
+
+184 . (M) Department Highest Salary
+
+
+select d.name as Department,
+        e.name as Employee,
+        e.salary as Salary
+
+from department d join employee e ON d.id=e.departmentId
+
+where 
+    (departmentId,salary) IN (select departmentId,max(salary) from employee
+    group by departmentId )
+
+
+
+
+
+
+
+180 .(M) Consecutive Numbers
+
+select distinct T1.num as ConsecutiveNums
+
+from
+    Logs T1,Logs T2, Logs T3
+
+where
+
+    T1.id=T2.id+1 AND
+    T1.num=T2.num AND
+
+    T2.id=T3.id+1 AND
+    T2.num=T3.num
+
+
+
+
+
+
+
+
+1158 .(M) Market Analysis - I
+SELECT user_id as buyer_id, join_date, COUNT(order_date) AS orders_in_2019
+FROM Users u
+LEFT JOIN Orders o
+ON u.user_id = o.buyer_id AND YEAR(order_date) = '2019'
+GROUP BY user_id
+
+
+
+
+
+
+
+
+
