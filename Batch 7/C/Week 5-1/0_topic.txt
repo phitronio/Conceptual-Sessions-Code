@@ -1,0 +1,12 @@
+Recursion 
+1. What is recursion 
+2. How to think 
+3. How it works 
+
+Problems : 
+1. Print Recursion ( https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/A)
+2. Print from 1 to N (https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/B)
+3. Print from N to 1 ( https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/C)
+
+
+Note : Recursive leap of faith 

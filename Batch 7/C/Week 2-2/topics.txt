@@ -1,0 +1,17 @@
+Problem solving with Loop and Array (Array recap):
+1. 
+    i) 1-N print(loop), 
+    ii) N-1 print(loop), 
+    iii) 1-N(positive) or N-0(negative) print depend on N value (loop), 
+    iv) sum of positive and negative from array (array).
+    
+2. i) print all the values of Array at even_indexes in reverse way. (index starts from 0 or 0 index based) 
+   ii) update or modify index'th value then print reverse.
+
+Array Constraints:
+1 <= N <= 10^6
+
+
+Codeforces Problem:
+1. https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/B
+2. https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/E
