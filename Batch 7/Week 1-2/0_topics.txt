@@ -1,9 +1,0 @@
-1. Loop Recap  
-
-
-Problem solving : 
-1. Number from 1 to N divisible by 3 and 7
-2. https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/K
-3. https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
-4. https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/G
-
