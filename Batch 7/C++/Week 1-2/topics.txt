@@ -1,0 +1,24 @@
+1. 
+    i) Module 3.5 practice 1
+   ii) Best or Topper student
+2. Module 3.5 practice 2
+
+
+3. Array Accending/Descending Sort 
+Size/N = 10^5, Numbers of items = N
+Selection sort complexity = O(N*N) = 10^10
+Built-in sort function complexity = O(N*log(N)) =17*10^5 =~ 10^7
+
+int* sort_fun(){
+    // int arr[n];
+    int* arr = new int[n];
+
+    // sort Accending
+    sort(arr,arr+n);
+    return arr;
+}
+
+
+4. String or Character Array with/without space Accending/Descending sort
+
+5. array A and array size N. Additionally, given a target T. four distinct indexed values summation equals target T.
