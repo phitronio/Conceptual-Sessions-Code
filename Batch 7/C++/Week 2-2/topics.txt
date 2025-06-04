@@ -1,0 +1,39 @@
+** Static and Dynamic array of object
+
+1. 
+    i) Module 3.5 practice 1
+   ii) Best or Topper student
+
+2. Replace word from sentence with given string X
+
+    input:
+    3
+    helloworld wor
+    mynameisatiqisatiq is
+    phitronisgoodphitronisgood good
+
+
+    output
+    hello@ld
+    myname@atiq@atiq
+    phitronis@phitronis@
+
+3. array of object any object specific column swap/reverse-
+
+    input:
+    3
+    Rakib 7 B 90
+    Sakib 10 A 85
+    Ahsan 9 C 36
+
+    output:
+    Rakib 9 B 90
+    Sakib 10 A 85
+    Ahsan 7 C 36
+
+
+4. math marks (math_marks), and Bangla marks (ban_marks). 
+total marks (sum of math_marks and ban_marks) in descending order. If multiple student have the same total marks then sort in id ascending
+
+
+5. math_marks in descending order. If multiple student have the same math_marks then sort them according to the bangla_marks in descending order. If multiple student have the same bangla_marks then sort them accoding to the id in ascending order as the id 
