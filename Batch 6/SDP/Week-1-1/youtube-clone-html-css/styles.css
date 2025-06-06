@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .header-left{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo{
+    height: 24px;
+  }
+
+  .search-bar{
+    display: flex;
+    flex:1;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-bar input{
+    flex:1;
+    padding: 12px;
+    border:1px solid;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 0px;
+  }
+
+  .search-bar button{
+    padding: 14px 24px;
+    border: none;
+    cursor:pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+
+  .search-bar>i{
+    padding: 14px;
+    border:none;
+    background-color: aliceblue;
+    border-radius: 40px;
+  }
+
+  .main-container{
+    display: flex;
+    flex: 1;
+  }
+
+  aside{
+    width: 240px;
+    padding: 10px;
+    position: sticky;
+    top:0;
+    height: 100vh;
+  }
+
+  aside ul{
+    list-style: none;
+  }
+
+  aside ul li{
+    padding:10px;
+    cursor: pointer;
+  }
+
+  aside ul li:hover{
+    background-color: #f0f0f0;
+  }
+
+  aside ul li i{
+    margin-right: 10px;
+  }
+
+  .content{
+    flex:1;
+    padding:20px;
+  }
+
+  .categories{
+    display: flex;
+    gap:12px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+  }
+
+  .category-btn{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .video-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+    gap:25px;
+  }
+
+  .video-card{
+    border:1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .video-card:hover{
+    background-color: #777474;
+  }
+
+  .video-card img{
+    width:100%;
+  }
+
+  .video-info{
+    padding: 10px;
+  }
+  .video-info h3{
+    font-size:16px;
+    margin-bottom: 6px;
+  }
+  .video-info p{
+    font-size:13px;
+    margin-bottom: 6px;
+  }
+
+
+
+
+
