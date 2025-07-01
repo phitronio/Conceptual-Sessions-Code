@@ -1,0 +1,14 @@
+1. What is Linked List 
+2. Node of a Singly Linked list 
+
+Printing a Singly Linked List 
+
+  
+3. Insertion of a node to the list 
+ -> head 
+ -> tail 
+ -> any position 
+
+Problem : 
+1.Size of a linked list 
+2. User Input
