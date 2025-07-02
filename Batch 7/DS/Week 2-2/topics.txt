@@ -1,0 +1,12 @@
+1. https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/B
+
+2. practice problem 1 - two linked list input
+                    ** linked list same or not
+
+3. practice problem 3 - maximum value
+    ** min_val
+
+
+discussion : 
+4. delete depend on query - practice problem 4
+5. find duplicate, delete duplicate
