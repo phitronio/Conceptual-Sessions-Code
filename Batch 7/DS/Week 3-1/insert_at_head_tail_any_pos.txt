@@ -1,0 +1,76 @@
+void insert_at_head(Node *&head, Node *&tail, int val)
+{
+    Node *newnode = new Node(val);
+
+    // if (tail == NULL) 
+    if (head == NULL)
+    {
+        head = newnode;
+        tail = newnode;
+        return;
+    }
+    newnode->next = head;
+    head->prev = newnode;
+    head = newnode;
+}
+
+
+void insert_at_tail(Node *&head, Node *&tail, int val)
+{
+    Node *newnode = new Node(val);
+    // if (tail == NULL) 
+    if (head == NULL)
+    {
+        head = newnode;
+        tail = newnode;
+        return;
+    }
+    tail->next = newnode;
+    newnode->prev = tail;
+    tail = newnode;
+}
+
+
+// method 1: insert at any position in a doubly linked list. But, can not insert at the head or tail. Also, tail pointer not track when insert at tail.
+void insert_at_any_pos(Node *head, int idx, int val)
+{
+    Node *newNode = new Node(val);
+    Node *tmp = head;
+    for (int i = 1; i < idx; i++)
+    {
+        tmp = tmp->next;
+    }
+    newNode->next = tmp->next;
+    tmp->next->prev = newNode;
+    tmp->next = newNode;
+    newNode->prev = tmp;
+}
+
+
+// method 2: tail track
+
+void insert_at_any_position(Node *&head, Node *&tail, int index, int val)
+{
+    Node *new_node = new Node(val);
+    Node *temp = head;
+    for (int i = 0; i < index - 1; i++)
+    {
+        temp = temp->next;
+    }
+
+    new_node->next = temp->next;
+    new_node->prev = temp;
+
+    // Best practice: Check if temp is NULL before accessing next
+    // if (temp->next != NULL) // If not inserting at the end
+    // {
+    temp->next->prev = new_node;
+    // }
+
+    temp->next = new_node;
+
+    // if (new_node->next == NULL)
+    // {
+    //     tail = new_node; // Update tail if inserted at the end
+    // }
+}

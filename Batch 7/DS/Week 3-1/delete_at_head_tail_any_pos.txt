@@ -1,0 +1,46 @@
+// delete the head node of a doubly linked list. if initial list is empty, do nothing and getting segmentation fault
+void delete_at_head(Node *&head, Node *&tail)
+{
+    Node *deleteNode = head;
+    head = head->next;
+    delete deleteNode;
+    
+    if (head == NULL)
+    {
+        tail = NULL;
+        return;
+    }
+    head->prev = NULL;
+}
+
+
+// delete the tail node of a doubly linked list. if initial list is empty, do nothing and getting segmentation fault
+void delete_at_tail(Node *&head, Node *&tail)
+{
+    Node *deleteNode = tail;
+    tail = tail->prev;
+    delete deleteNode;
+
+    if (tail == NULL)
+    {
+        head = NULL;
+        return;
+    }
+    tail->next = NULL;
+}
+
+
+
+// head or tail node can not delete from this function. Also, not track tail pointer because all middle nodes does not need to track tail pointer
+void delete_at_any_pos(Node *head, int idx)
+{
+    Node *tmp = head;
+    for (int i = 1; i < idx; i++)
+    {
+        tmp = tmp->next;
+    }
+    Node *deleteNode = tmp->next;
+    tmp->next = tmp->next->next;
+    tmp->next->prev = tmp;
+    delete deleteNode;
+}
