@@ -1,0 +1,9 @@
+1. optimize and handle corner case:
+    i) insert_at_head,
+    ii) insert_at_tail,
+    iii) insert_at_any_pos,
+    iv) delete_at_head,
+    v) delete_at_tail,
+    vi) delete_at_any_pos
+
+2. module 10.5 -> practice problem (4)
