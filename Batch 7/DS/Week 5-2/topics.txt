@@ -1,0 +1,7 @@
+1. https://leetcode.com/problems/deepest-leaves-sum/
+
+2. sum of leaves node (practice)
+
+3. perfect binary tree nodes
+
+4. right outer nodes
