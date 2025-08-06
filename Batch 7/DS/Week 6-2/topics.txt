@@ -1,0 +1,14 @@
+1. Priority Queue
+   -Max PQ
+   -Min PQ 
+Problem - Custom Comparator for Priority Queue
+
+Roll Name Marks given, print highest marks student information, if the marks is same print the name who has lower roll. (module- practice task)
+
+2. pair compare use depend on name(ascending)
+- name and roll
+
+3. most frequent value print
+- Phitron is a programming learning platform Phitron helps students learn programming especially C programming C++ programming data structure algorithm and AI/ML
+
+4. https://leetcode.com/problems/contains-duplicate/description/
