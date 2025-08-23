@@ -1,0 +1,15 @@
+1. What is Graph?
+
+2. Types of graph.
+
+3. Real life scenarios of each type.
+
+4. Types of graph representation
+
+5. Pros and Cons of Each Type
+
+6. Space Complexity of Adjacency Matrix and Adjacency List
+
+7. How to convert from Adjacency Matrix to Adjacency List
+
+8. How to convert from Adjacency List to Adjacency Matrix.
