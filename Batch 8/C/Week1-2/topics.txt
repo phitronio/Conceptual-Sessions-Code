@@ -1,0 +1,11 @@
+1. Online judge - 
+    - hackerrank (https://www.hackerrank.com/)
+    - codeforces (https://codeforces.com/)
+    - phitron OJ ( Shown 2.5 & 3.5 practice problem solved)
+
+2. https://www.hackerrank.com/contests/introduction-to-c-programming-a-module-3-5-a-practice-day-2/challenges
+
+3. loop (for, while, do while)
+    - https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/B
+
+** Escape sequence
