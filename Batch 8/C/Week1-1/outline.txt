@@ -1,0 +1,18 @@
+- What is Programming? what is programming language?
+- How C language works?
+
+- Data Types
+- variables
+- Operators
+- conditional statements
+
+- Problem solving 
+
+-arithmatic
+ plus +
+ minus -
+ multiplication *
+ division /
+ modulus %
+
+ 
