@@ -1,0 +1,6 @@
+------- Today's Outline -------
+1. Online Judge Issues
+2. Type Casting 
+3. Scope
+
+4. Problem Solving 
