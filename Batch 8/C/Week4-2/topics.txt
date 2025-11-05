@@ -1,0 +1,25 @@
+1. Frequency Array Problem(using function):
+    i) Frequency Array (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/V)
+    ii) Count Letters (https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J)
+
+
+2. String problem: 
+S string of N size.
+    - capital, small and digits count (https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/M)
+
+
+3. Pointer problem -
+    i) Practice problem 5(module 15.5): Question: swap_it() 
+    ii) Max and MIN(https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/G) - Home work
+    iii) Sort Numbers(https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/T)
+
+4. check a number positive or negative or zero using function. return something in main function for print "positive" or "negative" or "zero". - Home work
+
+5. Practice problem 3(module 15.5): Question: Write a function named count_odd() which receives an array of integers and the size of that array and counts the number of odd elements in that array and returns that. Call that function in the main function and print the count there.
+
+Sample Input
+5
+1 5 4 10 2
+Sample Output
+2
+
