@@ -1,0 +1,8 @@
+1. What is Function ? 
+
+2. Types of Function (based on return/parameter)
+
+- parameters + return
+- parameters + no return
+- no parameters + return
+- no parameters + no return
