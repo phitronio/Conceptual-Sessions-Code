@@ -1,0 +1,7 @@
+1. 
+    i) Module 3.5 practice 1
+   ii) Best or Topper student (if mark equals then consider roll)
+   
+2. String or Character Array with/without space Accending/Descending sort
+
+3. array A and array size N. Additionally, given a target T. four distinct indexed values summation equals target T.
