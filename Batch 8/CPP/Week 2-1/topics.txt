@@ -1,0 +1,23 @@
+String 
+1. Declaration + User Input 
+2. Input with Spaces
+3. Useful Access Function
+4. Useful Modification 
+   i. Concat using + 
+   ii. push_back and pop_back
+   iii. Easy assignment using =
+   iv. Erase  // index 
+   v. insert // index
+   vi. Replace 
+   
+5. Find Function
+6. Stringstream 
+7. Reverse Function
+8. Sort Function
+
+
+
+Problem solving :
+1. https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/U
+2. https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/V
+3. https://codeforces.com/contest/1703/problem/B
