@@ -1,0 +1,12 @@
+Time Complexity:
+
+Definition of Time Complexity
+
+General time complexities
+
+practices: https://docs.google.com/document/d/12ZqZJQsBGwOOg7ESlWp4fS71G_hqXmSANHX7E7iwkXk/edit?tab=t.0
+
+
+why it is necessary to analyze time complexity before submitting
+
+Example: https://codeforces.com/group/MWSDmqgszm/contest/223205/problem/D
