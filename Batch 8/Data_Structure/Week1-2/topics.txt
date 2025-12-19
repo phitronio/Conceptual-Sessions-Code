@@ -1,0 +1,9 @@
+1. Suffix Sum 
+
+2. module 3 -> Practice Problem 2 -> Equilibrium_Index
+
+3. Duplicate element found from vector or array.
+    1 <= Size <= 10 ^ 5, 0 <= V[index] <= 10 ^ 9
+
+4. Array or Vector descending order sorted(YES) or not(NO)
+   - check using sort (Home Work)
