@@ -1,0 +1,11 @@
+--------> Singly Linked List <---------
+
+* What is Linked List
+* What is Singly Linked List
+
+* Insertion In Singly Linked List
+    # Insert at head
+    # Insert at tail
+    # Insert at any position
+* User Input
+* Size of linked list
