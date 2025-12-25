@@ -1,0 +1,36 @@
+// code from main course module 
+// head insert
+void insert_at_head(Node *&head, int val)
+{
+    Node *newnode = new Node(val);
+    newnode->next = head;
+    head = newnode;
+}
+
+// tail insert
+void insert_at_tail(Node *&head, Node *&tail, int val)
+{
+    Node *newnode = new Node(val);
+    if (head == NULL)
+    {
+        head = newnode;
+        tail = newnode;
+        return;
+    }
+    tail->next = newnode;
+    tail = newnode;
+}
+
+// insert at any position
+void insert_at_any_pos(Node *head, int idx, int val) 
+{
+    Node *newnode = new Node(val);
+
+    Node *tmp = head;
+    for (int i = 1; i < idx; i++)
+    {
+        tmp = tmp->next;
+    }
+    newnode->next = tmp->next; // first step
+    tmp->next = newnode;       // second step
+}
