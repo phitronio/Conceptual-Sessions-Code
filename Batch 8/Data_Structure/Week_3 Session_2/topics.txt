@@ -1,0 +1,9 @@
+1. Train Route Tracker (dinajpur rangpur natore dhaka cumilla chittagong end)
+- visit location
+- next
+- prev
+
+2. queries again (module 9: problem 4) + delete operation (home task)
+
+3. Extra practice problem discussion (module 10)
+
