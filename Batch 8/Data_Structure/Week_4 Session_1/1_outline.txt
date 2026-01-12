@@ -1,0 +1,7 @@
+problem solving
+
+1. https://leetcode.com/problems/valid-parentheses/
+
+2.  https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+
+3. https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/description/
