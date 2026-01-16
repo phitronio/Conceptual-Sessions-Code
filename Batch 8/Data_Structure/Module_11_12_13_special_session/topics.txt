@@ -1,1 +1,3 @@
+https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Week_4%20Session_2/two_stack_same_or_not.cpp
+https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Week_4%20Session_2/elimination_occurence.cpp
 https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Week_3%20Session_2/train_route.cpp
