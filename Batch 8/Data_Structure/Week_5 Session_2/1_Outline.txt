@@ -1,0 +1,7 @@
+- Sum of Leaf Nodes
+- All leaf Nodes
+- max depth of a binary tree
+- total node count
+- perfect binary tree
+- right outer tree
+- left outer tree
