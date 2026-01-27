@@ -1,0 +1,6 @@
+- sorting vector
+- checking if ascending/descending
+- reverse printing
+- prefix sum
+- SLL traversal and max value finding
+- Data Structure Conceptual Session Week_2 Session_2 from 1 hour 20 mins
