@@ -1,0 +1,17 @@
+1. Same or Not I + II -
+    i) Module 11 practice problem 1 - https://docs.google.com/document/d/13NBT8-HPjv5IRtc_HBjUvqq8SZX3hCl5/edit
+     i) Week 4 Conceptual Session 2 (first to 40 minute) - https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Week_4%20Session_2/two_stack_same_or_not.cpp
+
+
+2. Is It Valid -
+    i) Week 4 Conceptual Session 2 (1 hours :04 minute to 1hour:28 minute ) - https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Week_4%20Session_2/elimination_occurence.cpp
+    ii) leetcode link(extra practice): https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/
+
+
+3. Queries Again - Module special session 
+    i) Session video - https://drive.google.com/file/d/1M2qDPCF3UbUyp_-7UyeKB7fLrI2p2kkm/view?usp=sharing
+    ii) Code link - https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Module_11_12_13_special_session/query_again.cpp
+
+
+4. Browser History -
+    i) Week 3 Conceptual Session 2 (Train Route) - https://github.com/phitronio/Conceptual-Sessions-Code/blob/main/Batch%208/Data_Structure/Week_3%20Session_2/train_route.cpp
