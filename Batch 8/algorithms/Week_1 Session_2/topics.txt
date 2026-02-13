@@ -1,0 +1,39 @@
+You are given a 2D matrix representing a maze in a city. Each cell can represent a road, a building, or a destination point. You are standing at point S (Start) and want to reach point E (End). You can move up, down, left, and right through road cells, but you cannot pass through buildings.
+
+Your task is to determine whether there exists a path from S to E.
+. → road
+* → building
+S → starting point
+E → ending point
+
+6 7
+*******
+*S..*.*
+*.*.*.*
+*.*...*
+*..*E.*
+*******
+
+
+1. can go starting to ending point? 
+
+input 1:
+6 7
+*******
+*...*.*
+*.*.*.*
+*.*...*
+*..*..*
+*******
+
+input 2:
+5 8
+********
+*..*...*
+********
+*..*...*
+********
+
+2. count how many separate parts of the city exist?
+
+3. how many cell/road point have in separate/each parts?
