@@ -1,0 +1,13 @@
+1. All about conceptual sessions
+2. Online Judge (Problem Solving) - Codeforces, LeetCode, HackerRank, PhitronOJ, etc.
+
+- What is Programming/program? (Programming is the process of designing, writing, testing, and maintaining step-by-step instructions (code) that tell a computer how to perform specific tasks. )
+- What is programming language?
+- How C language works?
+
+- Data Types
+- variables
+- Operators
+- conditional statements
+
+- Problem solving 
