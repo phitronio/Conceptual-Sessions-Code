@@ -1,0 +1,15 @@
+1. Online judge - 
+    - hackerrank (https://www.hackerrank.com/)
+    - codeforces (https://codeforces.com/)
+    - phitron OJ ( Shown 2.5 & 3.5 practice problem solved)
+# 2.5 practice sheet: https://docs.google.com/document/d/1sMKlLhoXE23QDXIdXMTk1c9b2o4T3ZcTV6hVpC6zct4/edit?tab=t.0
+
+# https://docs.google.com/document/d/1g5SH9FOPlxqtzkmcaC-ltrI0LIYW2kahIRSO-1wwYkk/edit?usp=sharing
+
+
+3. loop (for, while, do while)
+    - https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/B
+
+4. what is test cases?
+
+** Escape sequence
