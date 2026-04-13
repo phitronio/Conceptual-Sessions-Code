@@ -1,0 +1,12 @@
+--------> Today's Outline <-----------
+
+1. Online Judge Test Cases (Recap)
+
+2. Typecasting
+
+3. Scope in C Programming
+
+4. Problem Solving
+    i) https://codeforces.com/problemset/problem/1866/A
+    
+    ii) https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I
