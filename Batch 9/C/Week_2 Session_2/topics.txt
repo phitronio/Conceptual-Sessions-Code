@@ -1,0 +1,13 @@
+Problem solving with Loop and Array (Array recap):
+1. 
+    i) 1->N print(loop), 
+    ii) N->1 print(loop), 
+    iii) 1->N(positive) or -N -> -1(negative) print depend on N value (loop), 
+    iv) sum of positive and negative number from array (array). (practice task)
+        -> even number sum and odd number sum from array (array)
+    v) update array index value (practice task)
+    
+2. Codeforces Problem:
+    i) https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/B
+    ii) https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/E 
+    iii) https://codeforces.com/contest/1560/problem/A
