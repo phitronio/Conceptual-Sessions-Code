@@ -1,0 +1,5 @@
+streamlit
+requests
+sentence-transformers
+numpy
+PyPDF2
