@@ -1,0 +1,21 @@
+1. Pointers Recap
+    -> dereferencing
+    -> pointers of an array
+
+2. Dynamic Memory Allocation
+
+-> Stack Memory and Heap Memory
+
+-> Dynamic Variable Allocation
+    - declaration
+    - input
+    - output
+
+-> Dynamic Array Allocation
+    - declaration
+    - input
+    - output
+
+-> Why we need Dynamic Array?
+
+-> Problem Solving
