@@ -1,0 +1,10 @@
+1. 
+    i) Module 3.5 practice 1
+   ii) Best or Topper student
+   
+2. String or Character Array with/without space Accending/Descending sort
+Size/N = 10^5, Numbers of items = N
+Selection sort complexity = O(N*N) = 10^10
+Built-in sort function complexity = O(N*log(N)) =17*10^5 =~ 10^7
+
+3. array A and array size N. Additionally, given a target T. one/two/three/four distinct indexed values summation equals target T.
