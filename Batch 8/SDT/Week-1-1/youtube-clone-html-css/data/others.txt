@@ -1,0 +1,6 @@
+
+youtube logo : https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg
+
+home icon : <i class="fas fa-home"></i>
+microphone icon : <i class="fa fa-microphone"></i>
+clock icon : <i class="fa fa-clock-o">
