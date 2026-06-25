@@ -1,0 +1,13 @@
+1. suffix sum
+
+2. Problem 2 -> Equilibrium_Index.cpp
+
+3. Duplicate element found from vector or array.
+    1 <= Size <= 10 ^ 5, 0 <= V[index] <= 10 ^ 9
+
+4. array or vector descending order sorted(YES) or not(NO). 
+
+
+
+5. Homework - Code Fest 2 last problem
+https://www.hackerrank.com/contests/phitron-code-fest-2-b9/challenges/silent-days-in-the-city/problem?isFullScreen=false
