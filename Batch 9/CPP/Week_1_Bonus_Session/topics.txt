@@ -1,0 +1,7 @@
+C++ for DSA
+ - Static & Dynamic Variables
+ - Static & Dynamic Arrays
+ - Class and Objects + constructor
+
+
+week 1 conceptual session 2 - https://phitron.io/conceptual-session/6a0b672e3474e3caf858f855
