@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://kmeansclustering.oneapp.dev/ -->
+<html lang="en"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>10. K-Means Clustering — Animated</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./10. K-Means Clustering — Animated_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eef2f6;
+    --grid:#d7e0ea;
+    --ink:#132033;
+    --ink-soft:#5b6b80;
+    --coral:#ff6b5e;
+    --teal:#2ec4b6;
+    --amber:#ffb703;
+    --neutral:#9aa7b6;
+    --panel:#ffffff;
+    --shadow: 0 12px 40px rgba(19,32,51,0.12);
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:
+      linear-gradient(var(--grid) 1px, transparent 1px) 0 0/28px 28px,
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0/28px 28px,
+      var(--paper);
+    font-family:'Space Grotesk', sans-serif;
+    color:var(--ink);
+    padding:24px;
+  }
+  .stage{
+    width:min(920px, 96vw);
+    background:var(--panel);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    border:1px solid #dfe6ee;
+    overflow:hidden;
+  }
+  .head{
+    padding:22px 28px 14px;
+    border-bottom:1px dashed #dbe3ec;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 6px;
+  }
+  h1{
+    font-size:20px;
+    margin:0;
+    line-height:1.35;
+    min-height:52px;
+    transition:opacity .25s ease;
+  }
+  .kbadge{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    background:var(--ink);
+    color:#fff;
+    padding:8px 12px;
+    border-radius:10px;
+    white-space:nowrap;
+    align-self:flex-start;
+  }
+  .phases{
+    display:flex;
+    gap:6px;
+    padding:12px 28px 0;
+    flex-wrap:wrap;
+  }
+  .phase-pill{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.03em;
+    color:#b6bfca;
+    background:#f3f6f9;
+    border:1px solid #e3e9f0;
+    padding:5px 10px;
+    border-radius:999px;
+    transition:all .25s ease;
+  }
+  .phase-pill.done{ color:var(--ink-soft); background:#eaf2f4; border-color:#d7e0ea; }
+  .phase-pill.active{ color:#fff; background:var(--ink); border-color:var(--ink); }
+  canvas{ display:block; width:100%; height:auto; }
+  .foot{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:14px 28px 22px;
+    flex-wrap:wrap;
+  }
+  .legend{ display:flex; gap:16px; font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-soft); flex-wrap:wrap;}
+  .legend span{ display:inline-flex; align-items:center; gap:6px;}
+  .dot{ width:10px; height:10px; border-radius:50%; display:inline-block;}
+  .controls{ display:flex; align-items:center; gap:10px; }
+  button{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    border:1px solid var(--ink);
+    background:#fff;
+    color:var(--ink);
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  button:hover{ background:var(--ink); color:#fff; }
+  button:disabled{ opacity:0.35; cursor:not-allowed; }
+  button:disabled:hover{ background:#fff; color:var(--ink); }
+  select{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    border:1px solid #c9d3de;
+    border-radius:8px;
+    padding:7px 8px;
+    background:#fff;
+    color:var(--ink);
+  }
+</style>
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><style id="dark-reader-style" type="text/css">@media screen {
+html {-webkit-transition : -webkit-filter 300ms linear;}
+}</style><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
+<body __processed_1772e0f2-f287-4936-9403-af8c433f5a61__="true" cz-shortcut-listen="true">
+
+<div class="stage">
+  <div class="head">
+    <div>
+      <p class="eyebrow" id="eyebrow">Step 2 / Assign</p>
+      <h1 id="title" style="opacity: 1;">Iteration 2 — give every point to its nearest centroid</h1>
+    </div>
+    <div class="kbadge" id="kbadge">K = 3</div>
+  </div>
+
+  <div class="phases" id="phases"><span class="phase-pill done" data-i="0">1 · Raw data</span><span class="phase-pill done" data-i="1">2 · Initialize</span><span class="phase-pill done" data-i="2">3 · Measure distance</span><span class="phase-pill active" data-i="3">4 · Assign &amp; update</span><span class="phase-pill" data-i="4">5 · Converged</span><span class="phase-pill" data-i="5">6 · Elbow method</span><span class="phase-pill" data-i="6">7 · Complete</span></div>
+
+  <canvas id="c" width="920" height="520"></canvas>
+
+  <div class="foot">
+    <div class="legend">
+      <span><i class="dot" style="background:var(--neutral)"></i>unassigned</span>
+      <span><i class="dot" style="background:var(--coral)"></i>cluster A</span>
+      <span><i class="dot" style="background:var(--teal)"></i>cluster B</span>
+      <span><i class="dot" style="background:var(--amber)"></i>cluster C</span>
+      <span>◆ centroid</span>
+      <span>— distance line</span>
+    </div>
+    <div class="controls">
+      <button id="prevBtn">◂ Prev</button>
+      <button id="playBtn">Play</button>
+      <button id="nextBtn">Next ▸</button>
+      <button id="restartBtn">Restart</button>
+      <select id="kSelect">
+        <option value="2">K = 2</option>
+        <option value="3" selected="">K = 3</option>
+        <option value="4">K = 4</option>
+        <option value="5">K = 5</option>
+        <option value="6">K = 6</option>
+      </select>
+      <select id="speed">
+        <option value="1.6">Slow</option>
+        <option value="1" selected="">Normal</option>
+        <option value="0.5">Fast</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+const titleEl = document.getElementById('title');
+const eyebrowEl = document.getElementById('eyebrow');
+const kbadgeEl = document.getElementById('kbadge');
+const playBtn = document.getElementById('playBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const restartBtn = document.getElementById('restartBtn');
+const speedSel = document.getElementById('speed');
+const kSelect = document.getElementById('kSelect');
+const phasesEl = document.getElementById('phases');
+
+const PHASES = ['Raw data','Initialize','Measure distance','Assign & update','Converged','Elbow method','Complete'];
+PHASES.forEach((name,i)=>{
+  const pill = document.createElement('span');
+  pill.className = 'phase-pill';
+  pill.textContent = `${i+1} · ${name}`;
+  pill.dataset.i = i;
+  phasesEl.appendChild(pill);
+});
+function setPhaseUI(i){
+  [...phasesEl.children].forEach((el,idx)=>{
+    el.classList.toggle('active', idx===i);
+    el.classList.toggle('done', idx<i);
+  });
+}
+
+// ---------- state ----------
+let paused = false;
+let speed = 1;
+let generation = 0; // bump to abort in-flight tweens/sleeps on restart
+let vt = 0;
+let lastFrame = null;
+const activeTweens = [];
+
+const COLORS = { neutral: '#9aa7b6', A: '#ff6b5e', B: '#2ec4b6', C: '#ffb703', D: '#8b6bd8', E: '#ff6bbd', F: '#4ade80' };
+const CLUSTER_KEYS = ['A','B','C','D','E','F'];
+let currentK = 3;
+
+function hexToRgb(hex){
+  const v = parseInt(hex.slice(1),16);
+  return [(v>>16)&255, (v>>8)&255, v&255];
+}
+function lerpColor(a,b,t){
+  const ca=hexToRgb(a), cb=hexToRgb(b);
+  const r = Math.round(ca[0]+(cb[0]-ca[0])*t);
+  const g = Math.round(ca[1]+(cb[1]-ca[1])*t);
+  const bl= Math.round(ca[2]+(cb[2]-ca[2])*t);
+  return `rgb(${r},${g},${bl})`;
+}
+function easeInOutCubic(t){ return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+
+function tick(ts){
+  if(lastFrame===null) lastFrame = ts;
+  const dt = ts - lastFrame;
+  lastFrame = ts;
+  if(!paused) vt += dt * speed;
+  for(let i=activeTweens.length-1;i>=0;i--){
+    const tw = activeTweens[i];
+    if(tw.gen !== generation){ activeTweens.splice(i,1); tw.resolve(); continue; }
+    if(paused) continue; // freeze in place — don't reapply/advance while browsing history
+    const t = Math.min(1, Math.max(0, (vt - tw.start)/tw.duration));
+    tw.update(easeInOutCubic(t));
+    if(t>=1){ activeTweens.splice(i,1); tw.resolve(); }
+  }
+  draw();
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+function tween(duration, update){
+  return new Promise(resolve=>{
+    activeTweens.push({ start: vt, duration: Math.max(1,duration), update, gen: generation, resolve });
+  });
+}
+function sleep(ms){ return tween(ms, ()=>{}); }
+async function guarded(gen, promise){
+  await promise;
+  return gen === generation;
+}
+
+let history = [];       // snapshots at each labeled checkpoint
+let historyIndex = -1;  // which snapshot is currently on screen
+
+function updateNavButtons(){
+  prevBtn.disabled = historyIndex <= 0;
+}
+
+function snapshotState(eyebrow, title, phase){
+  return {
+    eyebrow, title, phase,
+    kbadge: kbadgeEl.textContent,
+    points: points.map(p=>({ x:p.x, y:p.y, color:p.color, cluster:p.cluster })),
+    centroids: centroids.map(c=>({ x:c.x, y:c.y, key:c.key })),
+    elbow: drawState.elbow ? {...drawState.elbow} : null,
+    distanceDemo: drawState.distanceDemo ? JSON.parse(JSON.stringify(drawState.distanceDemo)) : null,
+    meanCalc: drawState.meanCalc ? {...drawState.meanCalc} : null,
+    pointFade: drawState.pointFade
+  };
+}
+
+// Called by the live timeline whenever it reaches a new labeled step.
+function setLabel(eyebrow, text, phase){
+  eyebrowEl.textContent = eyebrow;
+  titleEl.style.opacity = 0;
+  setTimeout(()=>{ titleEl.textContent = text; titleEl.style.opacity = 1; }, 180);
+  setPhaseUI(phase);
+  history.push(snapshotState(eyebrow, text, phase));
+  historyIndex = history.length - 1;
+  updateNavButtons();
+}
+
+// Called by Prev/Next when browsing already-visited checkpoints.
+function restoreSnapshot(idx){
+  const snap = history[idx];
+  if(!snap) return;
+  paused = true;
+  playBtn.textContent = 'Play';
+  eyebrowEl.textContent = snap.eyebrow;
+  titleEl.textContent = snap.title;
+  titleEl.style.opacity = 1;
+  kbadgeEl.textContent = snap.kbadge;
+  setPhaseUI(snap.phase);
+  points = snap.points.map(p=>({...p, lineAlpha:0, _targetCluster:p.cluster}));
+  centroids = snap.centroids.map(c=>({...c}));
+  drawState.elbow = snap.elbow ? {...snap.elbow} : null;
+  drawState.distanceDemo = snap.distanceDemo ? JSON.parse(JSON.stringify(snap.distanceDemo)) : null;
+  drawState.meanCalc = snap.meanCalc ? {...snap.meanCalc} : null;
+  drawState.pointFade = snap.pointFade===undefined ? 1 : snap.pointFade;
+  drawState.showLines = false;
+  historyIndex = idx;
+  updateNavButtons();
+}
+
+// Force whatever is currently animating/waiting to finish immediately,
+// so the async timeline moves on to its next await right away.
+function skipCurrent(){
+  const gen = generation;
+  activeTweens.slice().forEach(tw=>{
+    if(tw.gen !== gen) return;
+    tw.update(1);
+    const idx = activeTweens.indexOf(tw);
+    if(idx>=0) activeTweens.splice(idx,1);
+    tw.resolve();
+  });
+}
+
+// ---------- data ----------
+function seededRand(seed){
+  let s = seed;
+  return ()=>{ s = (s*9301+49297)%233280; return s/233280; };
+}
+const rand = seededRand(42);
+function gauss(rx,ry,cx,cy){
+  let u=0,v=0;
+  while(u===0)u=rand(); while(v===0)v=rand();
+  const n = Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+  return { x: cx + n*rx*0.5, y: cy + (Math.sqrt(-2*Math.log(rand()))*Math.sin(2*Math.PI*rand()))*ry*0.5 };
+}
+
+function buildPoints(){
+  const blobs = [
+    {cx:230, cy:150, rx:100, ry:90},
+    {cx:640, cy:180, rx:110, ry:80},
+    {cx:430, cy:390, rx:130, ry:90},
+  ];
+  const pts = [];
+  blobs.forEach(b=>{
+    for(let i=0;i<16;i++){
+      const p = gauss(b.rx,b.ry,b.cx,b.cy);
+      pts.push({ x:p.x, y:p.y, color: COLORS.neutral, cluster:null });
+    }
+  });
+  return pts;
+}
+let points = buildPoints();
+
+let centroids = []; // {x,y,key}
+
+function dist(ax,ay,bx,by){ return Math.hypot(ax-bx, ay-by); }
+
+function drawGridDots(){
+  // subtle plot axes
+  ctx.strokeStyle = '#e3e9f0';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(40, H-40); ctx.lineTo(W-30, H-40);
+  ctx.moveTo(40, 20); ctx.lineTo(40, H-40);
+  ctx.stroke();
+}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  if(drawState.pointFade > 0.02) drawGridDots();
+
+  ctx.save();
+  ctx.globalAlpha = drawState.pointFade;
+
+  // connecting lines (assignment sweep)
+  if(drawState.showLines){
+    ctx.lineWidth = 1;
+    points.forEach(p=>{
+      if(p.cluster && p.lineAlpha>0){
+        const c = centroids.find(c=>c.key===p.cluster);
+        if(!c) return;
+        ctx.strokeStyle = withAlpha(COLORS[p.cluster], p.lineAlpha);
+        ctx.beginPath();
+        ctx.moveTo(p.x,p.y);
+        ctx.lineTo(c.x,c.y);
+        ctx.stroke();
+      }
+    });
+  }
+
+  // points
+  points.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 6, 0, Math.PI*2);
+    ctx.fillStyle = p.color;
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(19,32,51,0.15)';
+    ctx.stroke();
+  });
+
+  // centroids
+  centroids.forEach(c=>{
+    ctx.save();
+    ctx.translate(c.x, c.y);
+    ctx.rotate(Math.PI/4);
+    const s = 11;
+    ctx.fillStyle = COLORS[c.key];
+    ctx.strokeStyle = '#132033';
+    ctx.lineWidth = 2;
+    ctx.fillRect(-s,-s,s*2,s*2);
+    ctx.strokeRect(-s,-s,s*2,s*2);
+    ctx.restore();
+  });
+  ctx.restore(); // close pointFade wrapper
+
+  if(drawState.distanceDemo) drawDistanceDemo();
+  if(drawState.meanCalc) drawMeanCalc();
+  if(drawState.elbow){ drawElbow(); }
+}
+
+function drawMeanCalc(){
+  const mc = drawState.meanCalc;
+  if(!mc || mc.alpha<=0) return;
+  ctx.save();
+  ctx.globalAlpha = mc.alpha;
+  const pw = 300, ph = 34 + mc.clusters.length*46 + 10;
+  const px = W - pw - 24, py = 22;
+  ctx.fillStyle = 'rgba(255,255,255,0.96)';
+  ctx.fillRect(px, py, pw, ph);
+  ctx.strokeStyle = '#c9d3de';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(px, py, pw, ph);
+  ctx.fillStyle = '#132033';
+  ctx.font = "600 12px 'JetBrains Mono', monospace";
+  ctx.fillText('new centroid = mean of its points', px+14, py+22);
+  mc.clusters.forEach((c,i)=>{
+    const y = py + 44 + i*46;
+    ctx.beginPath();
+    ctx.arc(px+20, y-4, 5, 0, Math.PI*2);
+    ctx.fillStyle = COLORS[c.key];
+    ctx.fill();
+    ctx.fillStyle = '#132033';
+    ctx.font = "600 12px 'JetBrains Mono', monospace";
+    ctx.fillText(`cluster ${c.key}  (n=${c.n})`, px+34, y);
+    ctx.font = "10.5px 'JetBrains Mono', monospace";
+    ctx.fillStyle = '#5b6b80';
+    ctx.fillText(`x̄=Σx/n=${c.sumX.toFixed(0)}/${c.n}=${c.mx.toFixed(1)}`, px+14, y+15);
+    ctx.fillText(`ȳ=Σy/n=${c.sumY.toFixed(0)}/${c.n}=${c.my.toFixed(1)}`, px+14, y+28);
+  });
+  ctx.restore();
+}
+
+function drawDistanceDemo(){
+  const dd = drawState.distanceDemo;
+  dd.lines.forEach(l=>{
+    if(l.alpha>0){
+      ctx.save();
+      ctx.globalAlpha = l.alpha;
+      ctx.strokeStyle = l.isWinner ? COLORS[l.key] : '#5b6b80';
+      ctx.lineWidth = l.width;
+      if(!l.isWinner) ctx.setLineDash([5,4]);
+      ctx.beginPath();
+      ctx.moveTo(dd.px, dd.py);
+      ctx.lineTo(l.cx, l.cy);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
+    }
+    if(l.labelAlpha>0){
+      const t = 0.32 + 0.14*l.idx; // stagger along the line so labels don't stack
+      const bx = dd.px + (l.cx-dd.px)*t, by = dd.py + (l.cy-dd.py)*t;
+      const dx = l.cx-dd.px, dy = l.cy-dd.py;
+      const len = Math.hypot(dx,dy) || 1;
+      const nx = -dy/len, ny = dx/len;
+      const side = (l.idx % 2 === 0) ? 1 : -1;
+      const mx = bx + nx*side*13, my = by + ny*side*13;
+      ctx.save();
+      ctx.globalAlpha = l.labelAlpha;
+      ctx.font = "600 12px 'JetBrains Mono', monospace";
+      const text = l.d.toFixed(1);
+      const tw = ctx.measureText(text).width;
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.fillRect(mx-tw/2-5, my-16, tw+10, 18);
+      ctx.strokeStyle = l.isWinner ? COLORS[l.key] : '#c9d3de';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(mx-tw/2-5, my-16, tw+10, 18);
+      ctx.fillStyle = l.isWinner ? COLORS[l.key] : '#5b6b80';
+      ctx.fillText(text, mx-tw/2, my-3);
+      ctx.restore();
+    }
+  });
+  ctx.save();
+  ctx.globalAlpha = 0.9;
+  ctx.beginPath();
+  ctx.arc(dd.px, dd.py, 11 + Math.sin(vt/150)*2, 0, Math.PI*2);
+  ctx.strokeStyle = '#132033';
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+  ctx.restore();
+}
+
+function withAlpha(hex, a){
+  const [r,g,b] = hexToRgb(hex);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+const legendEl = document.querySelector('.legend');
+function updateLegend(k){
+  legendEl.innerHTML = '';
+  const addItem = (color, label, isDot) => {
+    const span = document.createElement('span');
+    if(isDot){
+      const dot = document.createElement('i');
+      dot.className = 'dot';
+      dot.style.background = color;
+      span.appendChild(dot);
+      span.appendChild(document.createTextNode(label));
+    } else {
+      span.textContent = label;
+    }
+    legendEl.appendChild(span);
+  };
+  addItem(COLORS.neutral, 'unassigned', true);
+  CLUSTER_KEYS.slice(0,k).forEach(key=>{
+    addItem(COLORS[key], `cluster ${key}`, true);
+  });
+  addItem(null, '\u25c6 centroid', false);
+  addItem(null, '\u2014 distance line', false);
+}
+
+const drawState = { showLines:false, elbow:null, distanceDemo:null, meanCalc:null, pointFade:1 };
+
+// ---------- elbow chart ----------
+// Runs a small, deterministic k-means for a given K on the current point
+// cloud and returns the resulting WSS (within-cluster sum of squares),
+// broken down per cluster so the calculation can be displayed on screen.
+function kmeansRun(pts, k, iterations=15){
+  const cents = [];
+  for(let i=0;i<k;i++){
+    const idx = Math.floor((i+0.5)*pts.length/k);
+    cents.push({x:pts[idx].x, y:pts[idx].y});
+  }
+  let assign = new Array(pts.length).fill(0);
+  for(let it=0; it<iterations; it++){
+    for(let i=0;i<pts.length;i++){
+      let best=0, bestD=Infinity;
+      for(let c=0;c<k;c++){
+        const d = dist(pts[i].x, pts[i].y, cents[c].x, cents[c].y);
+        if(d<bestD){ bestD=d; best=c; }
+      }
+      assign[i]=best;
+    }
+    const sums = Array.from({length:k}, ()=>({x:0,y:0,n:0}));
+    for(let i=0;i<pts.length;i++){
+      const a = assign[i];
+      sums[a].x += pts[i].x; sums[a].y += pts[i].y; sums[a].n++;
+    }
+    for(let c=0;c<k;c++){
+      if(sums[c].n>0) cents[c] = {x:sums[c].x/sums[c].n, y:sums[c].y/sums[c].n};
+    }
+  }
+  const clusterWSS = new Array(k).fill(0);
+  const clusterN = new Array(k).fill(0);
+  for(let i=0;i<pts.length;i++){
+    const a = assign[i];
+    const d = dist(pts[i].x, pts[i].y, cents[a].x, cents[a].y);
+    clusterWSS[a] += d*d;
+    clusterN[a]++;
+  }
+  const wss = clusterWSS.reduce((s,v)=>s+v, 0);
+  return { k, wss, cents, assign, clusterWSS, clusterN };
+}
+// Standard "max distance from the chord" heuristic to auto-pick the elbow.
+function findElbowIndex(data){
+  const n = data.length;
+  const x1=0, y1=data[0], x2=n-1, y2=data[n-1];
+  const den = Math.hypot(y2-y1, x2-x1) || 1;
+  let maxD=-1, idx=1;
+  for(let i=1;i<n-1;i++){
+    const num = Math.abs((y2-y1)*i - (x2-x1)*data[i] + x2*y1 - y2*x1);
+    const d = num/den;
+    if(d>maxD){ maxD=d; idx=i; }
+  }
+  return idx;
+}
+
+function drawElbow(){
+  const elbow = drawState.elbow;
+  const ex = 90, ey = 46, ew = W-180, eh = 240;
+  ctx.save();
+  ctx.globalAlpha = elbow.alpha;
+  ctx.fillStyle = 'rgba(255,255,255,0.94)';
+  ctx.fillRect(ex-40, ey-30, ew+80, eh+230);
+  ctx.strokeStyle = '#c9d3de';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(ex, ey, ew, eh);
+  ctx.fillStyle = '#5b6b80';
+  ctx.font = '12px JetBrains Mono';
+  ctx.fillText('WCSS', ex-4, ey-10);
+  ctx.fillText('K', ex+ew-6, ey+eh+22);
+
+  const elbowData = elbow.data;
+  const n = elbowData.length;
+  const maxV = elbowData[0];
+  const pts = elbowData.map((v,i)=>({
+    x: ex + (i/(n-1))*ew,
+    y: ey + eh - (v/maxV)*eh*0.9
+  }));
+
+  // progressive line reveal
+  const reveal = drawState.elbow.reveal;
+  ctx.strokeStyle = '#132033';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  let drawn = reveal*(n-1);
+  for(let i=0;i<n;i++){
+    const t = Math.min(1, Math.max(0, drawn-i+1));
+    if(t<=0) break;
+    const px = pts[i-1] ? pts[i-1].x + (pts[i].x-pts[i-1].x)*Math.min(1,t) : pts[i].x;
+    const py = i===0 ? pts[i].y : pts[i-1].y + (pts[i].y-pts[i-1].y)*Math.min(1,t);
+    if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+  }
+  ctx.stroke();
+
+  pts.forEach((p,i)=>{
+    if((i/(n-1)) > reveal + 0.01) return;
+    const isElbow = i===elbow.elbowIdx && elbow.highlight;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,5,0,Math.PI*2);
+    ctx.fillStyle = isElbow ? COLORS.C : '#132033';
+    ctx.fill();
+    ctx.fillStyle = '#5b6b80';
+    ctx.font = '11px JetBrains Mono';
+    ctx.fillText('K='+(i+1), p.x-10, ey+eh+16);
+  });
+
+  if(elbow.highlight){
+    const p = pts[elbow.elbowIdx];
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 12 + Math.sin(vt/180)*3, 0, Math.PI*2);
+    ctx.strokeStyle = COLORS.C;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = '#132033';
+    ctx.font = '600 13px Space Grotesk';
+    ctx.fillText('elbow — best K', p.x+16, p.y-10);
+
+    const chosenIdx = currentK-1;
+    if(chosenIdx!==elbow.elbowIdx && chosenIdx>=0 && chosenIdx<n && (chosenIdx/(n-1))<=reveal+0.01){
+      const pc = pts[chosenIdx];
+      ctx.beginPath();
+      ctx.arc(pc.x, pc.y, 9, 0, Math.PI*2);
+      ctx.strokeStyle = '#132033';
+      ctx.setLineDash([3,3]);
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = '#5b6b80';
+      ctx.font = "11px 'JetBrains Mono', monospace";
+      ctx.fillText('your K', pc.x-14, pc.y+22);
+    }
+  }
+
+  // WSS calculation panel — shows the actual arithmetic behind the elbow point,
+  // plus a small worked-example figure for one real cluster.
+  if(elbow.calcRun && elbow.calcAlpha>0){
+    ctx.save();
+    ctx.globalAlpha = elbow.alpha * elbow.calcAlpha;
+    const cy = ey + eh + 44;
+    ctx.strokeStyle = '#dbe3ec';
+    ctx.beginPath();
+    ctx.moveTo(ex-20, cy-16);
+    ctx.lineTo(ex+ew+20, cy-16);
+    ctx.stroke();
+
+    ctx.fillStyle = '#132033';
+    ctx.font = "600 12.5px 'JetBrains Mono', monospace";
+    ctx.fillText('WSS  =  Σ (distance from each point to its own centroid)²', ex-20, cy+6);
+
+    const run = elbow.calcRun;
+    let line = `K=${run.k}:  WSS = `;
+    line += run.clusterWSS.map(v=>v.toFixed(0)).join(' + ');
+    line += `  =  ${run.wss.toFixed(0)}`;
+    ctx.font = "12px 'JetBrains Mono', monospace";
+    ctx.fillStyle = '#5b6b80';
+    ctx.fillText(line, ex-20, cy+28);
+
+    ctx.font = "10.5px 'JetBrains Mono', monospace";
+    ctx.fillStyle = '#9aa7b6';
+    ctx.fillText('worked example \u2192', ex-20, cy+48);
+
+    if(elbow.example){
+      const figW = 230, figH = 142;
+      const figX = ex+ew-figW, figY = ey+eh+34;
+      drawWssExampleFigure(figX, figY, figW, figH, elbow.example);
+    }
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+// Draws a real (to-scale) mini scatter of one cluster's actual points around
+// its actual centroid, with dashed distance lines — the concrete figure
+// behind one term of the WSS sum.
+function drawWssExampleFigure(x, y, w, h, example){
+  ctx.save();
+  ctx.fillStyle = 'rgba(255,255,255,0.75)';
+  ctx.fillRect(x, y, w, h);
+  ctx.strokeStyle = '#c9d3de';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(x, y, w, h);
+  ctx.font = "10px 'JetBrains Mono', monospace";
+  ctx.fillStyle = '#5b6b80';
+  ctx.fillText(`cluster ${example.key} \u2014 n=${example.n}`, x+8, y+14);
+
+  const cx = x + w/2, cyy = y + h/2 + 10;
+  let maxExtent = 1;
+  example.points.forEach(p=>{ maxExtent = Math.max(maxExtent, Math.abs(p.dx), Math.abs(p.dy)); });
+  const scale = (Math.min(w,h)/2 - 16) / maxExtent;
+
+  example.points.forEach(p=>{
+    const px = cx + p.dx*scale, py = cyy + p.dy*scale;
+    ctx.strokeStyle = 'rgba(91,107,128,0.5)';
+    ctx.setLineDash([3,3]);
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(cx,cyy); ctx.lineTo(px,py); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.beginPath(); ctx.arc(px,py,3.5,0,Math.PI*2);
+    ctx.fillStyle = COLORS[example.key];
+    ctx.fill();
+  });
+
+  // label the shortest and longest distance so the numbers feel concrete
+  const sorted = [...example.points].sort((a,b)=>a.d-b.d);
+  [sorted[0], sorted[sorted.length-1]].forEach(p=>{
+    const px = cx + p.dx*scale, py = cyy + p.dy*scale;
+    ctx.font = "9px 'JetBrains Mono', monospace";
+    ctx.fillStyle = '#132033';
+    ctx.fillText(p.d.toFixed(1), px+5, py-4);
+  });
+
+  // centroid marker
+  ctx.save();
+  ctx.translate(cx, cyy);
+  ctx.rotate(Math.PI/4);
+  ctx.fillStyle = COLORS[example.key];
+  ctx.strokeStyle = '#132033';
+  ctx.lineWidth = 1.5;
+  ctx.fillRect(-6,-6,12,12);
+  ctx.strokeRect(-6,-6,12,12);
+  ctx.restore();
+
+  ctx.font = "9.5px 'JetBrains Mono', monospace";
+  ctx.fillStyle = '#132033';
+  ctx.fillText(`\u03a3d\u00b2 = ${example.wss.toFixed(0)}`, x+8, y+h-8);
+  ctx.restore();
+}
+
+// ---------- k-means routine ----------
+function pickInitialCentroids(k){
+  const idx = new Set();
+  while(idx.size<k){ idx.add(Math.floor(rand()*points.length)); }
+  const keys = CLUSTER_KEYS;
+  let i=0;
+  return [...idx].map(ix=>({ x:points[ix].x, y:points[ix].y, key: keys[i++] }));
+}
+
+async function fadeInPoints(gen){
+  points.forEach(p=>{ p.r=0; p.color = COLORS.neutral; p.cluster=null; p.lineAlpha=0; });
+  for(let i=0;i<points.length;i++){
+    if(!(await guarded(gen, sleep(14)))) return false;
+  }
+  return true;
+}
+
+async function distanceDemo(gen, indices){
+  for(let order=0; order<indices.length; order++){
+    const idx = indices[order];
+    const p = points[idx];
+    const measures = centroids.map((c,ci)=>({
+      key: c.key, cx: c.x, cy: c.y, idx: ci,
+      d: dist(p.x, p.y, c.x, c.y)
+    }));
+    const minD = Math.min(...measures.map(m=>m.d));
+    const winner = measures.find(m=>m.d===minD).key;
+
+    drawState.distanceDemo = {
+      px: p.x, py: p.y,
+      lines: measures.map(m=>({ ...m, alpha:0, labelAlpha:0, width:1.5, isWinner: m.key===winner }))
+    };
+
+    setLabel('Step 2 / Measure Distance', `Point ${order+1} of ${indices.length} — distance = √((Δx)² + (Δy)²)`, 2);
+    if(!(await guarded(gen, tween(650, t=>{
+      drawState.distanceDemo.lines.forEach(l=>{ l.alpha=t; l.labelAlpha=t; });
+    })))) return false;
+    if(!(await guarded(gen, sleep(1100)))) return false;
+
+    setLabel('Step 2 / Pick Nearest', `Point ${order+1} of ${indices.length} — the smallest distance wins`, 2);
+    if(!(await guarded(gen, tween(600, t=>{
+      drawState.distanceDemo.lines.forEach(l=>{
+        if(l.isWinner) l.width = 1.5 + t*2.5;
+        else { l.alpha = 1-t; l.labelAlpha = 1-t; }
+      });
+    })))) return false;
+
+    const fromColor = p.color;
+    const toColor = COLORS[winner];
+    if(!(await guarded(gen, tween(400, t=>{ p.color = lerpColor(fromColor, toColor, t); })))) return false;
+    p.cluster = winner;
+
+    if(!(await guarded(gen, sleep(500)))) return false;
+    if(!(await guarded(gen, tween(400, t=>{
+      drawState.distanceDemo.lines.forEach(l=>{ if(l.isWinner) l.alpha = 1-t; });
+    })))) return false;
+    drawState.distanceDemo = null;
+  }
+  return true;
+}
+
+async function assignStep(gen){
+  drawState.showLines = true;
+  let changed = false;
+  const from = points.map(p=>({...p}));
+  points.forEach(p=>{
+    let best=null, bestD=Infinity;
+    centroids.forEach(c=>{
+      const d = dist(p.x,p.y,c.x,c.y);
+      if(d<bestD){ bestD=d; best=c.key; }
+    });
+    if(best!==p.cluster) changed = true;
+    p._targetCluster = best;
+  });
+  const ok = await guarded(gen, tween(900, t=>{
+    points.forEach((p,i)=>{
+      p.lineAlpha = Math.sin(t*Math.PI);
+      const fromColor = from[i].color;
+      const toColor = COLORS[p._targetCluster];
+      p.color = lerpColor(fromColor, toColor, t);
+    });
+  }));
+  if(!ok) return null;
+  points.forEach(p=>{ p.cluster = p._targetCluster; p.lineAlpha=0; });
+  drawState.showLines = false;
+  return changed;
+}
+
+async function updateStep(gen){
+  const newPos = centroids.map(c=>{
+    const members = points.filter(p=>p.cluster===c.key);
+    if(members.length===0) return {x:c.x,y:c.y};
+    const mx = members.reduce((s,p)=>s+p.x,0)/members.length;
+    const my = members.reduce((s,p)=>s+p.y,0)/members.length;
+    return {x:mx,y:my};
+  });
+
+  // Show the actual mean arithmetic (Σx/n, Σy/n) for each cluster before moving anything.
+  const calcClusters = centroids.map(c=>{
+    const members = points.filter(p=>p.cluster===c.key);
+    const n = members.length;
+    const sumX = members.reduce((s,p)=>s+p.x,0);
+    const sumY = members.reduce((s,p)=>s+p.y,0);
+    return { key:c.key, n, sumX, sumY, mx: n?sumX/n:c.x, my: n?sumY/n:c.y };
+  });
+  drawState.meanCalc = { alpha:0, clusters: calcClusters };
+  const okReveal = await guarded(gen, tween(500, t=>{ drawState.meanCalc.alpha = t; }));
+  if(!okReveal) return null;
+  if(!(await guarded(gen, sleep(1500)))) return null;
+
+  const from = centroids.map(c=>({x:c.x,y:c.y}));
+  let moved = false;
+  newPos.forEach((n,i)=>{ if(dist(n.x,n.y,from[i].x,from[i].y) > 1) moved = true; });
+  const ok = await guarded(gen, tween(1000, t=>{
+    centroids.forEach((c,i)=>{
+      c.x = from[i].x + (newPos[i].x-from[i].x)*t;
+      c.y = from[i].y + (newPos[i].y-from[i].y)*t;
+    });
+  }));
+  if(!ok) return null;
+  const okFade = await guarded(gen, tween(350, t=>{ drawState.meanCalc.alpha = 1-t; }));
+  drawState.meanCalc = null;
+  if(!okFade) return null;
+  return moved;
+}
+
+async function elbowScene(gen){
+  // Run k-means for K=1..6 on the actual current points and use the
+  // real WSS from each run to draw the chart.
+  const elbowRuns = [1,2,3,4,5,6].map(k=>kmeansRun(points, k));
+  const elbowDataArr = elbowRuns.map(r=>r.wss);
+  const elbowIdx = findElbowIndex(elbowDataArr);
+
+  drawState.elbow = { alpha:0, reveal:0, highlight:false, data: elbowDataArr, elbowIdx, calcRun:null, calcAlpha:0, example:null };
+  const ok = await guarded(gen, tween(600, t=>{
+    drawState.elbow.alpha = t;
+    drawState.pointFade = 1 - t*0.85;
+  }));
+  if(!ok) return false;
+  setLabel('Choosing K', 'How many clusters should there even be?', 5);
+  if(!(await guarded(gen, sleep(600)))) return false;
+  setLabel('The Elbow Method', 'Plot K against WCSS — total squared distance to centroids', 5);
+  const ok2 = await guarded(gen, tween(2200, t=>{ drawState.elbow.reveal = t; }));
+  if(!ok2) return false;
+  setLabel('Elbow Method', 'The bend is where adding clusters stops paying off', 5);
+  drawState.elbow.highlight = true;
+  if(!(await guarded(gen, sleep(1400)))) return false;
+
+  setLabel('WSS Calculation', `At K=${elbowIdx+1}, WSS = sum of squared distances within each cluster`, 5);
+  const run = elbowRuns[elbowIdx];
+  drawState.elbow.calcRun = run;
+
+  // Pick the largest cluster in this run as a concrete worked example,
+  // and record each of its member points' real offset/distance from its centroid.
+  let exIdx = 0;
+  for(let c=1;c<run.k;c++){ if(run.clusterN[c] > run.clusterN[exIdx]) exIdx = c; }
+  const exCentroid = run.cents[exIdx];
+  const exPoints = points
+    .filter((p,i)=>run.assign[i]===exIdx)
+    .map(p=>({ dx: p.x-exCentroid.x, dy: p.y-exCentroid.y, d: dist(p.x,p.y,exCentroid.x,exCentroid.y) }));
+  drawState.elbow.example = {
+    key: CLUSTER_KEYS[exIdx % CLUSTER_KEYS.length],
+    n: run.clusterN[exIdx],
+    wss: run.clusterWSS[exIdx],
+    points: exPoints
+  };
+
+  const ok3 = await guarded(gen, tween(700, t=>{ drawState.elbow.calcAlpha = t; }));
+  if(!ok3) return false;
+  if(!(await guarded(gen, sleep(3200)))) return false;
+  return true;
+}
+
+async function runLoop(){
+  const gen = generation;
+  points = buildPoints();
+  centroids = [];
+  drawState.pointFade = 1;
+  kbadgeEl.textContent = 'K = ' + currentK;
+  updateLegend(currentK);
+
+  setLabel('Step 0 / Raw Data', 'Unlabeled points — no groups yet', 0);
+  if(!(await fadeInPoints(gen))) return;
+  if(!(await guarded(gen, sleep(900)))) return;
+
+  setLabel('Step 1 / Initialize', 'Pick K points at random as starting centroids', 1);
+  centroids = pickInitialCentroids(currentK);
+  if(!(await guarded(gen, sleep(200)))) return;
+  const okShow = await guarded(gen, tween(500, ()=>{}));
+  if(!okShow) return;
+  if(!(await guarded(gen, sleep(700)))) return;
+
+  let iteration = 1;
+  let converged = false;
+  while(iteration <= 7 && gen===generation){
+    if(iteration===1){
+      const okDemo = await distanceDemo(gen, [5, 21, 37]);
+      if(!okDemo) return;
+    }
+
+    setLabel('Step 2 / Assign', `Iteration ${iteration} — give every point to its nearest centroid`, 3);
+    const changed = await assignStep(gen);
+    if(changed===null) return;
+    if(!(await guarded(gen, sleep(500)))) return;
+
+    setLabel('Step 3 / Update', `Iteration ${iteration} — move each centroid to the mean of its cluster`, 3);
+    const moved = await updateStep(gen);
+    if(moved===null) return;
+    if(!(await guarded(gen, sleep(500)))) return;
+
+    if(!changed && !moved){ converged = true; break; }
+    iteration++;
+  }
+  if(gen !== generation) return;
+
+  setLabel('Converged', converged ? 'Centroids stopped moving — clusters are stable' : 'Close enough — clusters have settled', 4);
+  if(!(await guarded(gen, sleep(2000)))) return;
+
+  const okElbow = await elbowScene(gen);
+  if(!okElbow) return;
+
+  setLabel('Complete', 'That\u2019s the full algorithm — press Restart to run it again from scratch', 6);
+}
+
+// ---------- controls ----------
+playBtn.addEventListener('click', ()=>{
+  if(paused && historyIndex < history.length - 1){
+    restoreSnapshot(history.length - 1); // jump back to where the live run actually is
+  }
+  paused = !paused;
+  playBtn.textContent = paused ? 'Play' : 'Pause';
+});
+restartBtn.addEventListener('click', ()=>{
+  generation++;
+  lastFrame = null;
+  paused = false;
+  playBtn.textContent = 'Pause';
+  drawState.elbow = null;
+  drawState.meanCalc = null;
+  history = [];
+  historyIndex = -1;
+  updateNavButtons();
+  runLoop();
+});
+speedSel.addEventListener('change', ()=>{ speed = parseFloat(speedSel.value); });
+kSelect.addEventListener('change', ()=>{
+  currentK = parseInt(kSelect.value, 10);
+  generation++;
+  lastFrame = null;
+  paused = false;
+  playBtn.textContent = 'Pause';
+  drawState.elbow = null;
+  drawState.meanCalc = null;
+  history = [];
+  historyIndex = -1;
+  updateNavButtons();
+  runLoop();
+});
+
+prevBtn.addEventListener('click', ()=>{
+  if(historyIndex > 0) restoreSnapshot(historyIndex - 1);
+});
+
+nextBtn.addEventListener('click', async ()=>{
+  // Already-seen checkpoint ahead of us: just replay it instantly.
+  if(historyIndex < history.length - 1){
+    restoreSnapshot(historyIndex + 1);
+    return;
+  }
+  // At the live edge: fast-forward the running timeline until it reaches
+  // its next labeled checkpoint, then land there.
+  paused = true;
+  playBtn.textContent = 'Play';
+  const startLen = history.length;
+  for(let i=0;i<150;i++){
+    skipCurrent();
+    await new Promise(r=>requestAnimationFrame(r));
+    if(history.length > startLen) break;
+  }
+});
+
+updateNavButtons();
+runLoop();
+</script>
+<script defer="" src="./10. K-Means Clustering — Animated_files/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;e3c1c9af36de41759418005494a48906&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>
