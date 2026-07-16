@@ -1,0 +1,19 @@
+# Doubly Linked List
+
+# Operations
+
+$ Insertions
+    -> Head
+    -> tail
+    -> any position
+$ Deletion
+    -> Head
+    -> tail
+    -> any position
+
+# input from user
+
+# Size of DLL
+
+** Problem Solving
+-> https://leetcode.com/problems/design-browser-history/description/
