@@ -1,0 +1,11 @@
+1. two stack same or not order of removing. (STL stack or manual stack with list)
+
+2. support session - 
+    - Q query
+    - 0 or "JOIN" NAME = join "NAME" student support
+    - 1 or "DONE" = print "NAME" who got support, if no student present then print "No Student"
+
+3. 'A' will remove/elimination previous 'B' with itself. After elimination, if another elimination possible then remove. Then check "Empty" or "Not empty".
+sting = ABBAABBA
+
+Same as, https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/
