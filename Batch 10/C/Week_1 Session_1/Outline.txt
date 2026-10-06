@@ -1,0 +1,21 @@
+- What is Programming? what is programming language?
+- How C language works?
+
+- Data Types
+- variables
+- Operators
+- conditional statements
+
+- Problem solving 
+
+-arithmatic
+ plus +
+ minus -
+ multiplication *
+ division /
+ modulus %
+
+ // check if a number is even or odd
+// if odd then check if it's divisible by 3
+// if even then check if it's divisilbe by 6
+
