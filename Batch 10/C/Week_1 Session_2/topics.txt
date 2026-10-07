@@ -1,0 +1,24 @@
+1. Online Judge (Problem Solving) - Codeforces, Codechef, LeetCode, HackerRank, PhitronOJ, etc.
+
+** what is test cases?
+
+    - codeforces (https://codeforces.com/)
+        - https://codeforces.com/group/MWSDmqGsZm/contests
+    - codechef 
+        - https://www.codechef.com/problems/GAMBLING
+    - hackerrank (https://www.hackerrank.com/)
+        - https://www.hackerrank.com/contests/introduction-to-c-programming-a-module-3-5-a-practice-day-2/challenges
+    - phitron OJ (3.5 practice problem solved)
+        - https://judge.phitron.io/topics/cm5z7wa3u0007p301xbzdqkuk/cm8328tot004nr001spsd8yba?language=c_103
+
+video list - https://youtube.com/playlist?list=PLiwblITDIFbgKbO9sSWGYR2Xh7zc1GoCs&si=G6Bo1b3rfGEzBdKD
+
+2. loop (for, while, do while)
+
+** Scope (local scope(block scope), global scope)
+** Escape sequence
+
+/ -> forward slash
+\ -> back slash 
+    -> Escape sequence (% -> %%) 
+    \\ -> back slash print
