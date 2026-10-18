@@ -1,0 +1,16 @@
+Problem solving with conditional statement, Loop, Array and Assignment 1&2 Exam Preparation:
+
+1. 
+    i) https://atcoder.jp/contests/abc326/tasks/abc326_a
+    ii) https://atcoder.jp/contests/abc149/tasks/abc149_b
+
+2.  1-N print(loop), 
+    N-1 print(loop), 
+    1-N(positive) or N-0(negative) print depend on N value (loop), 
+    sum of positive and negative from array (array).
+
+3. print all the values of Array at even_indexes in reverse way. (index starts from 0 or 1 index based) 
+   + update index value.
+
+
+Note: Introduction to programming language week 1 & 2 all conceptual session
