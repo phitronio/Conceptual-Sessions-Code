@@ -1,0 +1,12 @@
+1. String problem: 
+S string of N size.
+    - capital, small and digits count (https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/M)
+
+2. Frequency Array Problem(using function):
+    i) Frequency Array (https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/V) - Home work
+    ii) Count Letters (https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J) -> 4 function type home work (after dynamic memory allocation)
+
+3. Pointer problem -
+    i) Practice problem 5(module 15.5): Question: swap_it() -> home work
+
+4. check a number positive or negative or zero using function. return something in main function for print "positive" or "negative" or "zero".
