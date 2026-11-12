@@ -1,0 +1,21 @@
+Order_ID,Date,Product,Category,Region,Units_Sold,Unit_Price_BDT,Revenue_BDT,Discount,Customer_Rating,Payment_Method
+O001,2026-01-01,Laptop,Electronics,North,2,65000,130000,0.05,4.7,Card
+O002,2026-01-02,Headphones,Electronics,South,5,2500,12500,0.1,4.2,Cash
+O003,2026-01-03,Office Chair,Furniture,East,3,8500,25500,0.0,4.5,Mobile Banking
+O004,2026-01-04,Notebook,Stationery,West,20,80,1600,0.05,4.0,Cash
+O005,2026-01-05,Desk,Furniture,North,2,12000,24000,0.1,4.3,Card
+O006,2026-01-06,Mouse,Electronics,East,8,900,7200,0.0,4.1,Mobile Banking
+O007,2026-01-07,Pen Set,Stationery,South,15,150,2250,0.05,3.9,Cash
+O008,2026-01-08,Monitor,Electronics,West,3,22000,66000,0.1,4.6,Card
+O009,2026-01-09,Bookshelf,Furniture,East,1,15000,15000,0.0,4.4,Mobile Banking
+O010,2026-01-10,Marker,Stationery,North,12,100,1200,0.05,3.8,Cash
+O011,2026-01-11,Keyboard,Electronics,South,4,1800,7200,0.0,4.2,Card
+O012,2026-01-12,Study Table,Furniture,West,2,9500,19000,0.1,4.5,Mobile Banking
+O013,2026-01-13,Calculator,Stationery,East,6,650,3900,0.05,4.1,Cash
+O014,2026-01-14,Smartphone,Electronics,North,2,28000,56000,0.0,4.8,Card
+O015,2026-01-15,Sofa,Furniture,South,1,32000,32000,0.1,4.6,Mobile Banking
+O016,2026-01-16,Printer,Electronics,West,2,14500,29000,0.05,4.0,Card
+O017,2026-01-17,File Folder,Stationery,North,18,60,1080,0.0,3.7,Cash
+O018,2026-01-18,Lamp,Furniture,East,4,1800,7200,0.05,4.2,Mobile Banking
+O019,2026-01-19,USB Drive,Electronics,South,7,750,5250,0.1,4.3,Cash
+O020,2026-01-20,Whiteboard,Stationery,West,3,2200,6600,0.0,4.4,Card
