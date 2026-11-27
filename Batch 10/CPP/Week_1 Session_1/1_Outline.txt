@@ -1,0 +1,28 @@
+1. Pointers Recap
+    -> dereferencing
+    -> pointers of an array
+2. Dynamic Memory Allocation
+
+
+-> Dynamic Variable Allocation
+    - declaration
+    - input
+    - output
+
+-> Dynamic Array Allocation
+    - declaration
+    - input
+    - output
+
+3. Object 
+4. Practic_problem_1
+Question: Create three static objects with the help of the constructor of the following class.
+Student
+{
+	name;
+	roll;
+	section;
+	math_marks;
+	cls;
+}
+Then compare those 3 objects and print who got the highest math_marks and print his/her name.
